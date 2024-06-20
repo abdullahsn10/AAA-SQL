@@ -1,0 +1,1770 @@
+[
+    {
+        "input": "شو هو رقم الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "حد بقدر يعطيني رقم دكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتعرف شو رقم الدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "رقم جوال name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "معك رقم دكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني رقم تلفون الدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "عندك رقم الدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "دبرلي رقم الدكتور name_arabic بحياتك",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي الرقم للدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدم رقمك للدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم دكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "كم رقم دكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي رقم الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "في مجال رقم الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "رقم تلفون الدكتور name_arabic ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بقدر اعطي رقم تلفوني للدكتور name_arabic أبصر؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتغدر تعطي رقم الهاتف للدكتور name_arabic ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بلاقي حد معه رقم رقم تلفون name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم تلفون الدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم دكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بنفع اقدم تلفون للدكتور name_arabic ؟ ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "في مجال رقم الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي رقم تلفون name_arabic ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "هات الرقم للدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش رقم تلفون الدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي رقم تلفون name_arabic ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي تلفون الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي رقمك للدكتور name_arabic ؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي تلفون الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هو رقم دكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بصير تعطي رقم الجوال للدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "رقم دكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدم رقم التلفون للدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم تلفون دكتور name_arabic ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي رقمك للدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي تلفون الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "رقم تلفون الدكتور name_arabic ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم تلفون الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني رقم جوال الدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "معك رقم دكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي الرقم للدكتور name_arabic ؟ ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "رقم دكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني رقم تلفون الدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم دكتور name_arabic ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ممكن اخد رقم تلفون الدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "مين معه رقم دكتور name_arabic ضروري ضروري",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "رقم دكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic رقم الجوال ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي رقمك للدكتور name_arabic ؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو تلفون الدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هو رقم الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "حد بقدر يعطيني رقم دكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتعرف شو رقم الدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "رقم جوال name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "معك رقم دكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني رقم تلفون الدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "عندك رقم الدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "دبرلي رقم الدكتور name_arabic بحياتك",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي الرقم للدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدم رقمك للدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم دكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "كم رقم دكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي رقم الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "في مجال رقم الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "رقم تلفون الدكتور name_arabic ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بقدر اعطي رقم تلفوني للدكتور name_arabic أبصر؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتغدر تعطي رقم الهاتف للدكتور name_arabic ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بلاقي حد معه رقم رقم تلفون name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم تلفون الدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم دكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بنفع اقدم تلفون للدكتور name_arabic ؟ ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "في مجال رقم الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي رقم تلفون name_arabic ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "هات الرقم للدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش رقم تلفون الدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي رقم تلفون name_arabic ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي تلفون الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي رقمك للدكتور name_arabic ؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي تلفون الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هو رقم دكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بصير تعطي رقم الجوال للدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "رقم دكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدم رقم التلفون للدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم تلفون دكتور name_arabic ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي رقمك للدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي تلفون الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "رقم تلفون الدكتور name_arabic ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم تلفون الدكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني رقم جوال الدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "معك رقم دكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي الرقم للدكتور name_arabic ؟ ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "رقم دكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني رقم تلفون الدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم دكتور name_arabic ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ممكن اخد رقم تلفون الدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "مين معه رقم دكتور name_arabic ضروري ضروري",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "رقم دكتور name_arabic",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic رقم الجوال ",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي رقمك للدكتور name_arabic ؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو تلفون الدكتور name_arabic؟",
+        "output": "SELECT phone_number FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايميا name_arabic",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الايميل تبع دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الايميل تبع دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اش ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو عنوان البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هي بريده الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو بريد الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هو عنوان البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش الايميل تاع الدكتور name_arabic؟",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو جيميل الدكتور name_arabic؟",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الايميل تبع دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هو عنوان البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بعرفش",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هو عنوان البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تحكيلي ايش ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل الدكتور name_arabic ؟ ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو عنوان البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تحكيلي ايش ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو حساب الدكتور name_arabic ؟ ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هو عنوان الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو حساب الدكتور name_arabic ؟ ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايميا name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو عنوان البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش هو ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو جيميل الدكتور name_arabic؟",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش هو ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو بريد الدكتور name_arabic؟",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو عنوان البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو بريد الدكتور name_arabic؟",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي الإيميل تبع دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو بريد الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هو بريد الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش هو ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تحكيلي ايش ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش ايميل دكتور name_arabic؟",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "حدا معو ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو إيميل الدكتور name_arabic؟",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايميا name_arabic",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الايميل تبع دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الايميل تبع دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اش ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو عنوان البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هي بريده الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو بريد الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هو عنوان البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش الايميل تاع الدكتور name_arabic؟",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو جيميل الدكتور name_arabic؟",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الايميل تبع دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هو عنوان البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بعرفش",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هو عنوان البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تحكيلي ايش ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل الدكتور name_arabic ؟ ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو عنوان البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تحكيلي ايش ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو حساب الدكتور name_arabic ؟ ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هو عنوان الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو حساب الدكتور name_arabic ؟ ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايميا name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو عنوان البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش هو ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو جيميل الدكتور name_arabic؟",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش هو ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو بريد الدكتور name_arabic؟",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو عنوان البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو بريد الدكتور name_arabic؟",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي الإيميل تبع دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو بريد الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو البريد الالكتروني للدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هو بريد الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش هو ايميل دكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تحكيلي ايش ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش ايميل دكتور name_arabic؟",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "حدا معو ايميل الدكتور name_arabic ",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو إيميل الدكتور name_arabic؟",
+        "output": "SELECT email FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الرقم الجامعي ل د.العمريس ",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الجامعي للدكتور name_arabic",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم دكتور name_arabic في ريتااج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الرقم الخاص بالدكتور name_arabic في ريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم د. name_arabic في ريتاج ",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "رقم ريتاج لدكتور name_arabic",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الرقم الخاص بالدكتور name_arabic في ريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic بريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم رتاج تبع الدكتور name_arabic ",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي رقم الدكتور name_arabic على ريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش رقم رتاج الدكتور name_arabic؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic على ريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم ريتاج تبع الدكتور name_arabic",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش رقم رتاج الدكتور name_arabic؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الرقم الخاص تبع الدكتور name_arabic في ريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور الفُلاني على ريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "قديشرقم دكتور name_arabic بريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم دكتور name_arabic في ريتااج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم دكتور name_arabic",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "نفس الطريقة ",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic على ريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الرقم شيت الدكتور name_arabic عريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic عرتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "رقم ريتاج لدكتور name_arabic",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic على ريتاج ؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش رقم دكتور name_arabic ع ريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم دكتور name_arabic في ريتااج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم دكتور name_arabic في ريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم دكتور name_arabic فريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic بريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش رقم ريتاج تاع الدكتور name_arabic",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هو رقم الدكتور name_arabic ع ريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic على ريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي رقم الدكتور name_arabic تبع ريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ريتاج الدكتور name_arabic ؟ ",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم دكتور name_arabic ع ريتاج ",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic في ريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "حد بعرف شو الرقم الجامعي للدكتور name_arabic؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic بريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم دكتور name_arabic الجامعي ؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتعرف الرقم شيت الدكتور name_arabic عريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الرقم الجامعي للدكتور name_arabic ؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic بريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم رتاج الدكتور name_arabic",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش رقم الدكتور name_arabic برتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic بريتاجججججج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتعرف رقم الدكتور name_arabic عريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور الدكتور name_arabic على ريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "رقم ريتاج لدكتور name_arabic",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش رقم الدكتور name_arabic على ريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic تبع ريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic على ريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكترر name_arabic في ريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الرقم الجامعي ل د.العمريس ",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الجامعي للدكتور name_arabic",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم دكتور name_arabic في ريتااج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الرقم الخاص بالدكتور name_arabic في ريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم د. name_arabic في ريتاج ",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "رقم ريتاج لدكتور name_arabic",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الرقم الخاص بالدكتور name_arabic في ريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic بريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم رتاج تبع الدكتور name_arabic ",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي رقم الدكتور name_arabic على ريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش رقم رتاج الدكتور name_arabic؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic على ريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم ريتاج تبع الدكتور name_arabic",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش رقم رتاج الدكتور name_arabic؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الرقم الخاص تبع الدكتور name_arabic في ريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور الفُلاني على ريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "قديشرقم دكتور name_arabic بريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم دكتور name_arabic في ريتااج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم دكتور name_arabic",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "نفس الطريقة ",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic على ريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الرقم شيت الدكتور name_arabic عريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic عرتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "رقم ريتاج لدكتور name_arabic",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic على ريتاج ؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش رقم دكتور name_arabic ع ريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم دكتور name_arabic في ريتااج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم دكتور name_arabic في ريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم دكتور name_arabic فريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic بريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش رقم ريتاج تاع الدكتور name_arabic",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هو رقم الدكتور name_arabic ع ريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic على ريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي رقم الدكتور name_arabic تبع ريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ريتاج الدكتور name_arabic ؟ ",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم دكتور name_arabic ع ريتاج ",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic في ريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "حد بعرف شو الرقم الجامعي للدكتور name_arabic؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic بريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم دكتور name_arabic الجامعي ؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتعرف الرقم شيت الدكتور name_arabic عريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الرقم الجامعي للدكتور name_arabic ؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic بريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم رتاج الدكتور name_arabic",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش رقم الدكتور name_arabic برتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic بريتاجججججج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتعرف رقم الدكتور name_arabic عريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور الدكتور name_arabic على ريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "رقم ريتاج لدكتور name_arabic",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش رقم الدكتور name_arabic على ريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic تبع ريتاج",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكتور name_arabic على ريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم الدكترر name_arabic في ريتاج؟",
+        "output": "SELECT ritaj_id FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي الساعات المكتبية للدكتور name_arabic؟ ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ساعات المكتبية للدكتور name_arabic ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الاوفيس اورز للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ساعات الفراغ للدكتور name_arabic؟ ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "متى الساعات المكتبية للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش هي الساعات المكتبية للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ال office hours للدكتور name_arabic",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "حد معه الاوفيس اورز للدكتور name_arabic؟ ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ممكن حد يصورلي برنامج الأوفيس اور للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ممكن حد يصورلي برنامج الأوفيس اور للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "عاش ابو علي",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الاوفيس اور تبعون دكتور name_arabic",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الساعات المكتبية للدكتور name_arabic ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني ساعات المكتب لدكتور name_arabic",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "متى مواعيد الساعة المكتبية للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "وقتيش الساعات المكتبية للدكتور المحترم name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش رقم مكتب الدكتور name_arabic ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "مين بعرف وين مكتب name_arabic",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "متى مواعيد الساعة المكتبية للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ال office hours للدكتور name_arabic",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش هي ساعات المكتبية للدكتور name_arabic",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايمتى بقعد الدكتور بمكتبه ؟ ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "مين بعرف متى الاوفيس اورز للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الأوقات يلي بكون فيها الدكتور name_arabic بمكتبه؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتعرف الساعات المكتبية لدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "متى بكون بمكتبه هالدكتور ! ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ساعات الدكتور name_arabic المكتبية",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الساعات المكتبية للدكتور name_arabic ؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو مواعيد ساعات الدكتور name_arabic",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اي ساعة بكون موجود الدكتور name_arabic بالمكتب",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الاوفيس اورز للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ساعات الدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش الساعات المكتبية للدكتورة name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "وينتا الساعات المكتبية للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "وينتا الساعات المكتبية للدكتور…",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو اوقات فراغ الدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ساعات دكتور name_arabic المكتبية ؟ ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هي الساعات المكتبية للدكتور name_arabic",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش الساعات الي الدكتور بكون فاضي فيها؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الأوقات يلي بكون فيها الدكتور name_arabic بمكتبه؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "متى بكون الدكتور name_arabic بمكتبه",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "حدا بعرف وينتا الساعات المكتبية للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ساعات المكتبية للدكتور name_arabic ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الساعات المكتبية للدكتور name_arabic ؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "الاوفس اور هههه للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الساعات المكتبية لname_arabic",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الاوفس اورز للدكتور name_arabic ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الساعات المكتبية للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش الساعات المكتبية للدكتور",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "وقتيش بلاقي الدكتور name_arabic في مكتبه؟ ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "وينتى الساعات المكتبية للدكتور name_arabic ؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي الساعات المكتبية للدكتور name_arabic؟ ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايمتا بقدر الاقي الدكتور name_arabic بالمكتب",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ساعات المكتبية للدكتور name_arabic ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "وقتيش بكون دكتور name_arabic بالمكتب؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي الساعات المكتبية للدكتور name_arabic؟ ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ساعات المكتبية للدكتور name_arabic ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الاوفيس اورز للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ساعات الفراغ للدكتور name_arabic؟ ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "متى الساعات المكتبية للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش هي الساعات المكتبية للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ال office hours للدكتور name_arabic",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "حد معه الاوفيس اورز للدكتور name_arabic؟ ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ممكن حد يصورلي برنامج الأوفيس اور للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ممكن حد يصورلي برنامج الأوفيس اور للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "عاش ابو علي",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الاوفيس اور تبعون دكتور name_arabic",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الساعات المكتبية للدكتور name_arabic ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني ساعات المكتب لدكتور name_arabic",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "متى مواعيد الساعة المكتبية للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "وقتيش الساعات المكتبية للدكتور المحترم name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش رقم مكتب الدكتور name_arabic ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "مين بعرف وين مكتب name_arabic",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "متى مواعيد الساعة المكتبية للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ال office hours للدكتور name_arabic",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش هي ساعات المكتبية للدكتور name_arabic",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايمتى بقعد الدكتور بمكتبه ؟ ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "مين بعرف متى الاوفيس اورز للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الأوقات يلي بكون فيها الدكتور name_arabic بمكتبه؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتعرف الساعات المكتبية لدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "متى بكون بمكتبه هالدكتور ! ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ساعات الدكتور name_arabic المكتبية",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الساعات المكتبية للدكتور name_arabic ؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو مواعيد ساعات الدكتور name_arabic",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اي ساعة بكون موجود الدكتور name_arabic بالمكتب",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الاوفيس اورز للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ساعات الدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش الساعات المكتبية للدكتورة name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "وينتا الساعات المكتبية للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "وينتا الساعات المكتبية للدكتور…",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو اوقات فراغ الدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ساعات دكتور name_arabic المكتبية ؟ ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هي الساعات المكتبية للدكتور name_arabic",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش الساعات الي الدكتور بكون فاضي فيها؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الأوقات يلي بكون فيها الدكتور name_arabic بمكتبه؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "متى بكون الدكتور name_arabic بمكتبه",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "حدا بعرف وينتا الساعات المكتبية للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ساعات المكتبية للدكتور name_arabic ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الساعات المكتبية للدكتور name_arabic ؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "الاوفس اور هههه للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الساعات المكتبية لname_arabic",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الاوفس اورز للدكتور name_arabic ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو الساعات المكتبية للدكتور name_arabic؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش الساعات المكتبية للدكتور",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "وقتيش بلاقي الدكتور name_arabic في مكتبه؟ ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "وينتى الساعات المكتبية للدكتور name_arabic ؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بدي الساعات المكتبية للدكتور name_arabic؟ ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايمتا بقدر الاقي الدكتور name_arabic بالمكتب",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو ساعات المكتبية للدكتور name_arabic ",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "وقتيش بكون دكتور name_arabic بالمكتب؟",
+        "output": "SELECT office_hours FROM instructor WHERE name_arabic = 'name_arabic';"
+    }
+]

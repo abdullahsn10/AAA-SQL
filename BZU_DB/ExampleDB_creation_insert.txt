@@ -1,0 +1,483 @@
+create database bzu_database;
+use bzu_database;
+
+CREATE TABLE faculty (
+    id INT PRIMARY KEY,
+    name_arabic VARCHAR(255),
+    name_english VARCHAR(255),
+    description TEXT,
+    dean_id INT
+);
+
+CREATE TABLE department (
+    id INT PRIMARY KEY,
+    faculty_id INT,
+    name_arabic VARCHAR(255),
+    name_english VARCHAR(255),
+    description TEXT,
+    head_instructor_id INT,
+    FOREIGN KEY (faculty_id) REFERENCES faculty(id)
+);
+
+CREATE TABLE major (
+    id INT PRIMARY KEY,
+    department_id INT,
+    name_arabic VARCHAR(255),
+    name_english VARCHAR(255),
+    description TEXT,
+    hours INT,
+    FOREIGN KEY (department_id) REFERENCES department(id)
+);
+
+CREATE TABLE course (
+    id INT PRIMARY KEY,
+    major_id INT,
+    name_arabic VARCHAR(255),
+    name_english VARCHAR(255),
+    description TEXT,
+    credits INT,
+    FOREIGN KEY (major_id) REFERENCES major(id)
+);
+
+CREATE TABLE instructor (
+    id INT PRIMARY KEY,
+    name_arabic VARCHAR(255),
+    name_english VARCHAR(255),
+    phone_number VARCHAR(20),
+    email VARCHAR(255),
+    ritaj_id VARCHAR(255),
+    office_hours VARCHAR(255),
+    department_id INT,
+    FOREIGN KEY (department_id) REFERENCES department(id)
+);
+
+CREATE TABLE teaching_assistant (
+    id INT PRIMARY KEY,
+    name_arabic VARCHAR(255),
+    name_english VARCHAR(255),
+    phone_number VARCHAR(20),
+    email VARCHAR(255),
+    ritaj_id VARCHAR(255),
+    department_id INT,
+    FOREIGN KEY (department_id) REFERENCES department(id)
+);
+
+CREATE TABLE course_prerequisite (
+    course_id INT,
+    prerequisite_id INT,
+    PRIMARY KEY (course_id, prerequisite_id),
+    FOREIGN KEY (course_id) REFERENCES course(id),
+    FOREIGN KEY (prerequisite_id) REFERENCES course(id)
+);
+
+CREATE TABLE instructor_course (
+    instructor_id INT,
+    course_id INT,
+    PRIMARY KEY (instructor_id, course_id),
+    FOREIGN KEY (instructor_id) REFERENCES instructor(id),
+    FOREIGN KEY (course_id) REFERENCES course(id)
+);
+
+CREATE TABLE ta_course (
+    ta_id INT,
+    course_id INT,
+    PRIMARY KEY (ta_id, course_id),
+    FOREIGN KEY (ta_id) REFERENCES teaching_assistant(id),
+    FOREIGN KEY (course_id) REFERENCES course(id)
+);
+
+ALTER TABLE faculty
+ADD FOREIGN KEY (dean_id) REFERENCES instructor(id);
+
+show tables;
+
+-- Insert Instructor Data including deans with 4-digit ritaj_id
+INSERT INTO instructor (id, name_arabic, name_english, phone_number, email, ritaj_id, office_hours, department_id) VALUES
+(1, 'منير فخر الدين', 'Muneer Fakhruddin', '1234567890', 'muneer.fakhr@bzu.edu', '1001', 'MWF 10-12', NULL),
+(2, 'أحمد النجار', 'Ahmad Al-Najjar', '1234567891', 'ahmad.najar@bzu.edu', '1002', 'TTh 2-4', NULL),
+(3, 'محمد علي', 'Mohammad Ali', '1234567892', 'mohammad.ali@bzu.edu', '1003', 'MW 1-3', NULL),
+(4, 'خالد سالم', 'Khaled Salem', '1234567893', 'khaled.salem@bzu.edu', '1004', 'TTh 9-11', NULL),
+(5, 'علي جميل', 'Ali Jameel', '1234567894', 'ali.jameel@bzu.edu', '1005', 'MWF 11-1', NULL),
+(6, 'غريس خوري', 'Grace Khoury', '1234567895', 'grace.khouri@bzu.edu', '2001', 'TTh 10-12', NULL),
+(7, 'رفاء الرمحي', 'Rafaa Al-Ramahi', '1234567896', 'rafaa.ramahi@bzu.edu', '3001', 'MW 9-11', NULL),
+(8, 'محمود دودين', 'Mahmoud Dudeen', '1234567897', 'mahmoud.dudeen@bzu.edu', '4001', 'TTh 1-3', NULL),
+(9, 'احمد أبو هنية', 'Ahmad Abu-Hniyeh', '1234567898', 'ahmad.abuhniyeh@bzu.edu', '5001', 'MWF 2-4', NULL),
+(10, 'رانية أبو حمده', 'Rania Abu-Hamdeh', '1234567899', 'rania.abuhamdeh@bzu.edu', '6001', 'TTh 11-1', NULL),
+(11, 'وفاء خاطر', 'Wafaa Khater', '1234567800', 'wafaa.khater@bzu.edu', '7001', 'MW 10-12', NULL),
+(12, 'ديمة ياسر', 'Deema Yasser', '1234567801', 'deema.yasser@bzu.edu', '8001', 'TTh 2-4', NULL),
+(13, 'أحمد السعده', 'Ahmad Al-Saadah', '1234567802', 'ahmad.alsaadah@bzu.edu', '9001', 'MWF 9-11', NULL);
+
+-- Insert Faculty Data
+INSERT INTO faculty (id, name_arabic, name_english, description, dean_id) VALUES
+(1, 'الآداب', 'Faculty of Arts', 'Description of Faculty of Arts', 1),
+(2, 'الأعمال والاقتصاد', 'Faculty of Business and Economics', 'Description of Faculty of Business and Economics', 6),
+(3, 'التربية', 'Faculty of Education', 'Description of Faculty of Education', 7),
+(4, 'الحقوق والإدارة العامة', 'Faculty of Law and Public Administration', 'Description of Faculty of Law and Public Administration', 8),
+(5, 'الدراسات العليا والأبحاث', 'Faculty of Graduate Studies and Research', 'Description of Faculty of Graduate Studies and Research', 9),
+(6, 'الصيدلة والتمريض والمهن الصحية', 'Faculty of Pharmacy, Nursing and Health Professions', 'Description of Faculty of Pharmacy, Nursing and Health Professions', 10),
+(7, 'العلوم', 'Faculty of Sciences', 'Description of Faculty of Sciences', 11),
+(8, 'الفنون والموسيقى والتصميم', 'Faculty of Arts, Music and Design', 'Description of Faculty of Arts, Music and Design', 12),
+(9, 'الهندسة والتكنولوجيا', 'Faculty of Engineering and Technology', 'Description of Faculty of Engineering and Technology', 13);
+
+-- Insert Departments
+INSERT INTO department (id, faculty_id, name_arabic, name_english, description, head_instructor_id) VALUES
+(1, 7, 'الأحياء والكيمياء الحيوية', 'Biology and Biochemistry', 'Description for Biology and Biochemistry', NULL),
+(2, 1, 'الإعلام', 'Media', 'Description for Media', NULL),
+(3, 4, 'الإدارة العامة', 'Public Administration', 'Description for Public Administration', NULL),
+(4, 2, 'إدارة الأعمال', 'Business Administration', 'Description for Business Administration', NULL),
+(5, 2, 'الإقتصاد', 'Economics', 'Description for Economics', NULL),
+(6, 6, 'التمريض', 'Nursing', 'Description for Nursing', NULL),
+(7, 6, 'التغذية والحمية', 'Nutrition and Dietetics', 'Description for Nutrition and Dietetics', NULL),
+(8, 1, 'التاريخ والآثار', 'History and Archaeology', 'Description for History and Archaeology', NULL),
+(9, 1, 'التربية الرياضية', 'Physical Education', 'Description for Physical Education', NULL),
+(10, 1, 'الجغرافية', 'Geography', 'Description for Geography', NULL),
+(11, 7, 'الرياضيات', 'Mathematics', 'Description for Mathematics', NULL),
+(12, 6, 'الصيدلة', 'Pharmacy', 'Description for Pharmacy', NULL),
+(13, 4, 'العلوم السياسية', 'Political Science', 'Description for Political Science', NULL),
+(14, 6, 'علاج النطق والسمع', 'Speech and Hearing Therapy', 'Description for Speech and Hearing Therapy', NULL),
+(15, 5, 'العلوم الإجتماعية والسلوكية', 'Social and Behavioral Sciences', 'Description for Social and Behavioral Sciences', NULL),
+(16, 2, 'العلوم المالية والمصرفية', 'Banking and Finance', 'Description for Banking and Finance', NULL),
+(17, 9, 'علم الحاسوب', 'Computer Science', 'Description for Computer Science', NULL),
+(18, 1, 'الفلسفة والدراسات الثقافية', 'Philosophy and Cultural Studies', 'Description for Philosophy and Cultural Studies', NULL),
+(19, 7, 'الفيزياء', 'Physics', 'Description for Physics', NULL),
+(20, 4, 'القانون', 'Law', 'Description for Law', NULL),
+(21, 7, 'الكيمياء', 'Chemistry', 'Description for Chemistry', NULL),
+(22, 1, 'اللغات والترجمة', 'Languages and Translation', 'Description for Languages and Translation', NULL),
+(23, 1, 'اللغة العربية وآدابها', 'Arabic Language and Literature', 'Description for Arabic Language and Literature', NULL),
+(24, 1, 'اللغة الفرنسية', 'French Language', 'Description for French Language', NULL),
+(25, 1, 'اللغة الإنجليزية وآدابها', 'English Language and Literature', 'Description for English Language and Literature', NULL),
+(26, 3, 'المناهج والتعليم', 'Curriculum and Instruction', 'Description for Curriculum and Instruction', NULL),
+(27, 2, 'المحاسبة', 'Accounting', 'Description for Accounting', NULL),
+(28, 9, 'الهندسة المعمارية والتخطيط', 'Architecture and Planning Engineering', 'Description for Architecture and Planning Engineering', NULL),
+(29, 9, 'الهندسة المدنية والبيئية', 'Civil and Environmental Engineering', 'Description for Civil and Environmental Engineering', NULL),
+(30, 9, 'الهندسة الكهربائية وهندسة الحاسوب', 'Electrical and Computer Engineering', 'Description for Electrical and Computer Engineering', NULL),
+(31, 9, 'الهندسة الميكانيكية والميكاترونكس', 'Mechanical and Mechatronics Engineering', 'Description for Mechanical and Mechatronics Engineering', NULL);
+
+-- Insert Majors for departments
+
+-- كلية الهندسة والتكنولوجيا
+INSERT INTO major (id, department_id, name_arabic, name_english, description, hours) VALUES
+(1, 28, 'الهندسة المعمارية', 'Architecture Engineering', 'Description for Architecture Engineering', 160),
+(2, 29, 'الهندسة المدنية', 'Civil Engineering', 'Description for Civil Engineering', 160),
+(3, 30, 'الهندسة الكهربائية', 'Electrical Engineering', 'Description for Electrical Engineering', 160),
+(4, 31, 'الهندسة الميكانيكية', 'Mechanical Engineering', 'Description for Mechanical Engineering', 160),
+(5, 31, 'هندسة الميكاترونيكس', 'Mechatronics Engineering', 'Description for Mechatronics Engineering', 160),
+(6, 30, 'هندسة الحاسوب', 'Computer Engineering', 'Description for Computer Engineering', 160),
+(7, 28, 'هندسة التخطيط والتصميم الحضري', 'Urban Planning and Design Engineering', 'Description for Urban Planning and Design Engineering', 160),
+(8, 17, 'علم الحاسوب', 'Computer Science', 'Description for Computer Science', 160),
+(9, 17, 'أمن المعلومات', 'Information Security', 'Description for Information Security', 160),
+(10, 29, 'هندسة البناء', 'Construction Engineering', 'Description for Construction Engineering', 160),
+(11, 29, 'هندسة المركبات الحديثة', 'Modern Vehicle Engineering', 'Description for Modern Vehicle Engineering', 160);
+
+-- كلية الصيدلة والتمريض والمهن الصحية
+INSERT INTO major (id, department_id, name_arabic, name_english, description, hours) VALUES
+(12, 12, 'دكتور صيدلي', 'PharmD', 'Description for PharmD', 160),
+(13, 6, 'العلوم الطبية المخبرية', 'Medical Laboratory Sciences', 'Description for Medical Laboratory Sciences', 160),
+(14, 7, 'التغذية والحمية', 'Nutrition and Dietetics', 'Description for Nutrition and Dietetics', 160),
+(15, 6, 'التمريض', 'Nursing', 'Description for Nursing', 160),
+(16, 14, 'علاج النطق والسمع', 'Speech and Hearing Therapy', 'Description for Speech and Hearing Therapy', 160),
+(17, 12, 'الصيدلة', 'Pharmacy', 'Description for Pharmacy', 160);
+
+-- كلية التربية
+INSERT INTO major (id, department_id, name_arabic, name_english, description, hours) VALUES
+(18, 26, 'تعليم اللغة الانجليزية كلغة أجنبية', 'Teaching English as a Foreign Language', 'Description for Teaching English as a Foreign Language', 160),
+(19, 9, 'التربية الرياضية', 'Physical Education', 'Description for Physical Education', 160),
+(20, 26, 'التعليم الجامع والتربية الخاصة', 'Inclusive Education and Special Education', 'Description for Inclusive Education and Special Education', 160);
+
+-- كلية الفنون والموسيقى والتصميم (no specific department mentioned in provided data)
+
+-- كلية الآداب
+INSERT INTO major (id, department_id, name_arabic, name_english, description, hours) VALUES
+(21, 23, 'اللغة العربية وآدابها', 'Arabic Language and Literature', 'Description for Arabic Language and Literature', 160),
+(22, 25, 'اللغة الانجليزية وآدابها', 'English Language and Literature', 'Description for English Language and Literature', 160),
+(23, 25, 'رئيسي اللغة الانجليزية/ فرعي الترجمة', 'Major in English / Minor in Translation', 'Description for Major in English / Minor in Translation', 160),
+(24, 22, 'الترجمة', 'Translation', 'Description for Translation', 160),
+(25, 24, 'رئيسي اللغة الفرنسية/ فرعي الترجمة', 'Major in French / Minor in Translation', 'Description for Major in French / Minor in Translation', 160),
+(26, 24, 'رئيسي اللغة الفرنسية/ فرعي علاقات دولية', 'Major in French / Minor in International Relations', 'Description for Major in French / Minor in International Relations', 160),
+(27, 24, 'رئيسي اللغة الفرنسية/ فرعي الآثار الفلسطينية', 'Major in French / Minor in Palestinian Archaeology', 'Description for Major in French / Minor in Palestinian Archaeology', 160),
+(28, 24, 'رئيسي اللغة الفرنسية/ فرعي إدارة أعمال', 'Major in French / Minor in Business Administration', 'Description for Major in French / Minor in Business Administration', 160),
+(29, 24, 'رئيسي اللغة الفرنسية/ فرعي التسويق', 'Major in French / Minor in Marketing', 'Description for Major in French / Minor in Marketing', 160),
+(30, 8, 'رئيسي التاريخ/ فرعي الآثار الفلسطينية', 'Major in History / Minor in Palestinian Archaeology', 'Description for Major in History / Minor in Palestinian Archaeology', 160),
+(31, 8, 'رئيسي التاريخ / فرعي العلوم السياسية', 'Major in History / Minor in Political Science', 'Description for Major in History / Minor in Political Science', 160),
+(32, 18, 'الجيوانفورماتكس', 'Geoinformatics', 'Description for Geoinformatics', 160),
+(33, 15, 'رئيسي علم الاجتماع/ فرعي الادارة العامة', 'Major in Sociology / Minor in Public Administration', 'Description for Major in Sociology / Minor in Public Administration', 160),
+(34, 15, 'رئيسي علم الاجتماع/ فرعي علم النفس', 'Major in Sociology / Minor in Psychology', 'Description for Major in Sociology / Minor in Psychology', 160),
+(35, 15, 'رئيسي علم النفس / فرعي علم الاجتماع', 'Major in Psychology / Minor in Sociology', 'Description for Major in Psychology / Minor in Sociology', 160),
+(36, 15, 'رئيسي علم النفس/ فرعي دراسات المرأة', 'Major in Psychology / Minor in Women Studies', 'Description for Major in Psychology / Minor in Women Studies', 160),
+(37, 2, 'الإعلام', 'Media', 'Description for Media', 160);
+
+-- كلية الاقتصاد والتجارة
+INSERT INTO major (id, department_id, name_arabic, name_english, description, hours) VALUES
+(38, 4, 'المحاسبة', 'Accounting', 'Description for Accounting', 160),
+(39, 4, 'ادارة الأعمال', 'Business Administration', 'Description for Business Administration', 160),
+(40, 5, 'العلوم المالية والمصرفية', 'Banking and Finance', 'Description for Banking and Finance', 160),
+(41, 16, 'العلوم المالية الإكتوارية', 'Actuarial Science', 'Description for Actuarial Science', 160),
+(42, 4, 'التسويق', 'Marketing', 'Description for Marketing', 160),
+(43, 5, 'الاقتصاد', 'Economics', 'Description for Economics', 160),
+(44, 5, 'اقتصاد الأعمال', 'Business Economics', 'Description for Business Economics', 160);
+
+-- كلية العلوم
+INSERT INTO major (id, department_id, name_arabic, name_english, description, hours) VALUES
+(45, 1, 'الأحياء /فرعي كيماء حيوية', 'Biology / Minor in Biochemistry', 'Description for Biology / Minor in Biochemistry', 160),
+(46, 1, 'الأحياء /فرعي تغذية وحمية', 'Biology / Minor in Nutrition and Dietetics', 'Description for Biology / Minor in Nutrition and Dietetics', 160),
+(47, 1, 'الأحياء /فرعي إدارة الاعمال', 'Biology / Minor in Business Administration', 'Description for Biology / Minor in Business Administration', 160),
+(48, 11, 'الرياضيات منفرد', 'Pure Mathematics', 'Description for Pure Mathematics', 160),
+(49, 11, 'الرياضيات/ فرعي علم الحاسوب', 'Mathematics / Minor in Computer Science', 'Description for Mathematics / Minor in Computer Science', 160),
+(50, 11, 'الرياضيات / فرعي اقتصاد', 'Mathematics / Minor in Economics', 'Description for Mathematics / Minor in Economics', 160),
+(51, 11, 'الرياضيات/ فرعي العلوم المالية والمصرفية', 'Mathematics / Minor in Banking and Finance', 'Description for Mathematics / Minor in Banking and Finance', 160),
+(52, 21, 'الكيمياء/فرعي كيمياء صناعية', 'Chemistry / Minor in Industrial Chemistry', 'Description for Chemistry / Minor in Industrial Chemistry', 160),
+(53, 21, 'الكيمياء/ فرعي إدارة الاعمال', 'Chemistry / Minor in Business Administration', 'Description for Chemistry / Minor in Business Administration', 160),
+(54, 21, 'الكيمياء/ فرعي كيمياء حيوية', 'Chemistry / Minor in Biochemistry', 'Description for Chemistry / Minor in Biochemistry', 160),
+(55, 21, 'الكيمياء/ فرعي التسويق', 'Chemistry / Minor in Marketing', 'Description for Chemistry / Minor in Marketing', 160),
+(56, 19, 'الفيزياء منفرد', 'Pure Physics', 'Description for Pure Physics', 160),
+(57, 19, 'الفيزياء/فرعي الرياضيات', 'Physics / Minor in Mathematics', 'Description for Physics / Minor in Mathematics', 160),
+(58, 19, 'الفيزياء/فرعي علم الحاسوب', 'Physics / Minor in Computer Science', 'Description for Physics / Minor in Computer Science', 160),
+(59, 19, 'الفيزياء /فرعي الكترونيات', 'Physics / Minor in Electronics', 'Description for Physics / Minor in Electronics', 160),
+(60, 1, 'علوم الأدلة الجنائية', 'Forensic Science', 'Description for Forensic Science', 160);
+
+-- كلية الحقوق والإدارة العامة
+INSERT INTO major (id, department_id, name_arabic, name_english, description, hours) VALUES
+(61, 20, 'القانون', 'Law', 'Description for Law', 160),
+(62, 3, 'الادارة العامة', 'Public Administration', 'Description for Public Administration', 160),
+(63, 3, 'رئيسي إدارة عامة/فرعي الاقتصاد', 'Major in Public Administration / Minor in Economics', 'Description for Major in Public Administration / Minor in Economics', 160),
+(64, 3, 'رئيسي إدارة عامة/فرعي العلوم السياسية', 'Major in Public Administration / Minor in Political Science', 'Description for Major in Public Administration / Minor in Political Science', 160),
+(65, 3, 'رئيسي إدارة عامة/فرعي علاقات دولية', 'Major in Public Administration / Minor in International Relations', 'Description for Major in Public Administration / Minor in International Relations', 160),
+(66, 13, 'العلوم السياسية', 'Political Science', 'Description for Political Science', 160),
+(67, 13, 'رئيسي علوم سياسية/فرعي الاقتصاد', 'Major in Political Science / Minor in Economics', 'Description for Major in Political Science / Minor in Economics', 160),
+(68, 13, 'رئيسي علوم سياسية/فرعي علاقات دولية', 'Major in Political Science / Minor in International Relations', 'Description for Major in Political Science / Minor in International Relations', 160),
+(69, 13, 'رئيسي علوم سياسية/فرعي فلسفة', 'Major in Political Science / Minor in Philosophy', 'Description for Major in Political Science / Minor in Philosophy', 160),
+(70, 13, 'رئيسي علوم سياسية/فرعي إدارة عامة', 'Major in Political Science / Minor in Public Administration', 'Description for Major in Political Science / Minor in Public Administration', 160),
+(71, 13, 'رئيسي علوم سياسية/فرعي دراسات المرأة', 'Major in Political Science / Minor in Women Studies', 'Description for Major in Political Science / Minor in Women Studies', 160),
+(72, 13, 'العلاقات الدولية', 'International Relations', 'Description for International Relations', 160);
+
+-- Insert Courses for various majors
+
+-- Courses for Architecture Engineering
+INSERT INTO course (id, major_id, name_arabic, name_english, description, credits) VALUES
+(1, 1, 'تصميم معماري 1', 'Architectural Design 1', 'Description for Architectural Design 1', 3),
+(2, 1, 'تصميم معماري 2', 'Architectural Design 2', 'Description for Architectural Design 2', 3),
+(3, 1, 'تاريخ العمارة', 'History of Architecture', 'Description for History of Architecture', 2);
+
+-- Courses for Civil Engineering
+INSERT INTO course (id, major_id, name_arabic, name_english, description, credits) VALUES
+(4, 2, 'تحليل إنشائي 1', 'Structural Analysis 1', 'Description for Structural Analysis 1', 3),
+(5, 2, 'هندسة الطرق', 'Highway Engineering', 'Description for Highway Engineering', 3),
+(6, 2, 'الهندسة الهيدروليكية', 'Hydraulic Engineering', 'Description for Hydraulic Engineering', 3);
+
+-- Courses for Electrical Engineering
+INSERT INTO course (id, major_id, name_arabic, name_english, description, credits) VALUES
+(7, 3, 'الدوائر الكهربائية 1', 'Electrical Circuits 1', 'Description for Electrical Circuits 1', 3),
+(8, 3, 'أنظمة التحكم', 'Control Systems', 'Description for Control Systems', 3),
+(9, 3, 'الإلكترونيات 1', 'Electronics 1', 'Description for Electronics 1', 3);
+
+-- Courses for Mechanical Engineering
+INSERT INTO course (id, major_id, name_arabic, name_english, description, credits) VALUES
+(10, 4, 'ديناميكا حرارية', 'Thermodynamics', 'Description for Thermodynamics', 3),
+(11, 4, 'ميكانيكا الموائع', 'Fluid Mechanics', 'Description for Fluid Mechanics', 3),
+(12, 4, 'نقل الحرارة', 'Heat Transfer', 'Description for Heat Transfer', 3);
+
+-- Courses for Computer Science
+INSERT INTO course (id, major_id, name_arabic, name_english, description, credits) VALUES
+(13, 8, 'برمجة 1', 'Programming 1', 'Description for Programming 1', 3),
+(14, 8, 'هياكل البيانات', 'Data Structures', 'Description for Data Structures', 3),
+(15, 8, 'أنظمة التشغيل', 'Operating Systems', 'Description for Operating Systems', 3);
+
+-- Courses for Business Administration
+INSERT INTO course (id, major_id, name_arabic, name_english, description, credits) VALUES
+(16, 4, 'مبادئ الإدارة', 'Principles of Management', 'Description for Principles of Management', 3),
+(17, 4, 'إدارة الموارد البشرية', 'Human Resources Management', 'Description for Human Resources Management', 3),
+(18, 4, 'إدارة المشاريع', 'Project Management', 'Description for Project Management', 3);
+
+-- Courses for Nursing
+INSERT INTO course (id, major_id, name_arabic, name_english, description, credits) VALUES
+(19, 15, 'أساسيات التمريض', 'Fundamentals of Nursing', 'Description for Fundamentals of Nursing', 3),
+(20, 15, 'تمريض البالغين', 'Adult Nursing', 'Description for Adult Nursing', 3),
+(21, 15, 'تمريض الأطفال', 'Pediatric Nursing', 'Description for Pediatric Nursing', 3);
+
+-- Courses for Political Science
+INSERT INTO course (id, major_id, name_arabic, name_english, description, credits) VALUES
+(22, 66, 'مقدمة في العلوم السياسية', 'Introduction to Political Science', 'Description for Introduction to Political Science', 3),
+(23, 66, 'النظم السياسية المقارنة', 'Comparative Political Systems', 'Description for Comparative Political Systems', 3),
+(24, 66, 'السياسة الدولية', 'International Politics', 'Description for International Politics', 3);
+
+-- Courses for Law
+INSERT INTO course (id, major_id, name_arabic, name_english, description, credits) VALUES
+(25, 61, 'قانون مدني 1', 'Civil Law 1', 'Description for Civil Law 1', 3),
+(26, 61, 'قانون جنائي', 'Criminal Law', 'Description for Criminal Law', 3),
+(27, 61, 'قانون تجاري', 'Commercial Law', 'Description for Commercial Law', 3);
+
+-- Courses for Accounting
+INSERT INTO course (id, major_id, name_arabic, name_english, description, credits) VALUES
+(28, 38, 'مبادئ المحاسبة 1', 'Principles of Accounting 1', 'Description for Principles of Accounting 1', 3),
+(29, 38, 'محاسبة متقدمة', 'Advanced Accounting', 'Description for Advanced Accounting', 3),
+(30, 38, 'محاسبة التكاليف', 'Cost Accounting', 'Description for Cost Accounting', 3);
+
+
+-- Insert Additional Instructors with 4-digit ritaj_id
+
+-- General format: (id, name_arabic, name_english, phone_number, email, ritaj_id, office_hours, department_id)
+
+INSERT INTO instructor (id, name_arabic, name_english, phone_number, email, ritaj_id, office_hours, department_id) VALUES
+(59, 'عبدالله أحمد', 'Abdullah Ahmad', '1234567831', 'abdullah.ahmad@bzu.edu', '1059', 'MWF 10-12', 1),
+(60, 'علي سالم', 'Ali Salem', '1234567832', 'ali.salem@bzu.edu', '1060', 'TTh 1-3', 2),
+(61, 'محمد زكريا', 'Mohammad Zakaria', '1234567833', 'mohammad.zakaria@bzu.edu', '1061', 'MW 11-1', 3),
+(62, 'إبراهيم حسن', 'Ibrahim Hassan', '1234567834', 'ibrahim.hassan@bzu.edu', '1062', 'TTh 10-12', 4),
+(63, 'حسين علي', 'Hussein Ali', '1234567835', 'hussein.ali@bzu.edu', '1063', 'MWF 9-11', 5),
+(64, 'خالد يوسف', 'Khaled Yousif', '1234567836', 'khaled.yousif@bzu.edu', '1064', 'TTh 2-4', 6),
+(65, 'محمود إبراهيم', 'Mahmoud Ibrahim', '1234567837', 'mahmoud.ibrahim@bzu.edu', '1065', 'MW 1-3', 7),
+(66, 'يوسف نادر', 'Yousif Nader', '1234567838', 'yousif.nader@bzu.edu', '1066', 'TTh 11-1', 8),
+(67, 'سمير خالد', 'Samir Khaled', '1234567839', 'samir.khaled@bzu.edu', '1067', 'MWF 10-12', 9),
+(68, 'فاطمة حسن', 'Fatima Hassan', '1234567840', 'fatima.hassan@bzu.edu', '1068', 'TTh 9-11', 1),
+(69, 'ليلى محمود', 'Leila Mahmoud', '1234567841', 'leila.mahmoud@bzu.edu', '1069', 'MW 2-4', 2),
+(70, 'نادر عمر', 'Nader Omar', '1234567842', 'nader.omar@bzu.edu', '1070', 'TTh 10-12', 3),
+(71, 'أحمد خالد', 'Ahmad Khaled', '1234567843', 'ahmad.khaled@bzu.edu', '1071', 'MWF 1-3', 4),
+(72, 'زينب يوسف', 'Zainab Yousif', '1234567844', 'zainab.yousif@bzu.edu', '1072', 'TTh 2-4', 5),
+(73, 'سعيد محمود', 'Saeed Mahmoud', '1234567845', 'saeed.mahmoud@bzu.edu', '1073', 'MW 10-12', 6),
+(74, 'مريم علي', 'Mariam Ali', '1234567846', 'mariam.ali@bzu.edu', '1074', 'TTh 1-3', 7),
+(75, 'نور الدين حسن', 'Nour Al-Din Hassan', '1234567847', 'nour.hassan@bzu.edu', '1075', 'MW 11-1', 8),
+(76, 'عمرو زكريا', 'Amro Zakaria', '1234567848', 'amro.zakaria@bzu.edu', '1076', 'TTh 10-12', 9),
+(77, 'نجوى إبراهيم', 'Najwa Ibrahim', '1234567849', 'najwa.ibrahim@bzu.edu', '1077', 'MWF 9-11', 1),
+(78, 'ياسين نادر', 'Yassin Nader', '1234567850', 'yassin.nader@bzu.edu', '1078', 'TTh 2-4', 2);
+
+
+-- Insert Teaching Assistants with 4-digit ritaj_id
+
+-- General format: (id, name_arabic, name_english, phone_number, email, ritaj_id, department_id)
+
+INSERT INTO teaching_assistant (id, name_arabic, name_english, phone_number, email, ritaj_id, department_id) VALUES
+(1, 'سارة يوسف', 'Sara Yousif', '1234567851', 'sara.yousif@bzu.edu', '2001', 1),
+(2, 'كريم حسن', 'Karim Hassan', '1234567852', 'karim.hassan@bzu.edu', '2002', 2),
+(3, 'منى زكريا', 'Mona Zakaria', '1234567853', 'mona.zakaria@bzu.edu', '2003', 3),
+(4, 'عادل إبراهيم', 'Adel Ibrahim', '1234567854', 'adel.ibrahim@bzu.edu', '2004', 4),
+(5, 'مها خالد', 'Maha Khaled', '1234567855', 'maha.khaled@bzu.edu', '2005', 5),
+(6, 'فؤاد نادر', 'Fouad Nader', '1234567856', 'fouad.nader@bzu.edu', '2006', 6),
+(7, 'نادية علي', 'Nadia Ali', '1234567857', 'nadia.ali@bzu.edu', '2007', 7),
+(8, 'أحمد سمير', 'Ahmad Samir', '1234567858', 'ahmad.samir@bzu.edu', '2008', 8),
+(9, 'إيمان يوسف', 'Iman Yousif', '1234567859', 'iman.yousif@bzu.edu', '2009', 9),
+(10, 'رائد محمود', 'Raed Mahmoud', '1234567860', 'raed.mahmoud@bzu.edu', '2010', 1),
+(11, 'سناء سالم', 'Sanaa Salem', '1234567861', 'sanaa.salem@bzu.edu', '2011', 2),
+(12, 'عبدالرحمن حسن', 'Abdulrahman Hassan', '1234567862', 'abdulrahman.hassan@bzu.edu', '2012', 3),
+(13, 'حسن علي', 'Hassan Ali', '1234567863', 'hassan.ali@bzu.edu', '2013', 4),
+(14, 'علاء نادر', 'Alaa Nader', '1234567864', 'alaa.nader@bzu.edu', '2014', 5),
+(15, 'هدى إبراهيم', 'Huda Ibrahim', '1234567865', 'huda.ibrahim@bzu.edu', '2015', 6),
+(16, 'سمية خالد', 'Somaya Khaled', '1234567866', 'somaya.khaled@bzu.edu', '2016', 7),
+(17, 'مروان يوسف', 'Marwan Yousif', '1234567867', 'marwan.yousif@bzu.edu', '2017', 8),
+(18, 'جميلة زكريا', 'Jameela Zakaria', '1234567868', 'jameela.zakaria@bzu.edu', '2018', 9),
+(19, 'ليلى علي', 'Leila Ali', '1234567869', 'leila.ali@bzu.edu', '2019', 1),
+(20, 'ياسمين سمير', 'Yasmin Samir', '1234567870', 'yasmin.samir@bzu.edu', '2020', 2);
+
+
+-- Insert Instructor-Course associations ensuring valid instructor_id values
+
+-- Insert Instructor-Course associations ensuring valid instructor_id values and department compatibility
+
+INSERT INTO instructor_course (instructor_id, course_id) VALUES
+(1, 1),  -- Instructor 1 (Architecture Engineering) teaching course 1 (Architectural Design 1)
+(1, 2),  -- Instructor 1 (Architecture Engineering) teaching course 2 (Architectural Design 2)
+(2, 3),  -- Instructor 2 (Architecture Engineering) teaching course 3 (History of Architecture)
+(2, 4),  -- Instructor 2 (Civil Engineering) teaching course 4 (Structural Analysis 1)
+(3, 5),  -- Instructor 3 (Civil Engineering) teaching course 5 (Highway Engineering)
+(3, 6),  -- Instructor 3 (Civil Engineering) teaching course 6 (Hydraulic Engineering)
+(4, 7),  -- Instructor 4 (Electrical Engineering) teaching course 7 (Electrical Circuits 1)
+(4, 8),  -- Instructor 4 (Electrical Engineering) teaching course 8 (Control Systems)
+(5, 9),  -- Instructor 5 (Electrical Engineering) teaching course 9 (Electronics 1)
+(5, 10), -- Instructor 5 (Mechanical Engineering) teaching course 10 (Thermodynamics)
+(6, 11), -- Instructor 6 (Mechanical Engineering) teaching course 11 (Fluid Mechanics)
+(6, 12), -- Instructor 6 (Mechanical Engineering) teaching course 12 (Heat Transfer)
+(7, 13), -- Instructor 7 (Computer Science) teaching course 13 (Programming 1)
+(7, 14), -- Instructor 7 (Computer Science) teaching course 14 (Data Structures)
+(8, 15), -- Instructor 8 (Computer Science) teaching course 15 (Operating Systems)
+(8, 16), -- Instructor 8 (Business Administration) teaching course 16 (Principles of Management)
+(9, 17), -- Instructor 9 (Business Administration) teaching course 17 (Human Resources Management)
+(9, 18), -- Instructor 9 (Business Administration) teaching course 18 (Project Management)
+(10, 19),-- Instructor 10 (Nursing) teaching course 19 (Fundamentals of Nursing)
+(10, 20),-- Instructor 10 (Nursing) teaching course 20 (Adult Nursing)
+(11, 21),-- Instructor 11 (Nursing) teaching course 21 (Pediatric Nursing)
+(11, 22),-- Instructor 11 (Political Science) teaching course 22 (Introduction to Political Science)
+(12, 23),-- Instructor 12 (Political Science) teaching course 23 (Comparative Political Systems)
+(12, 24),-- Instructor 12 (Political Science) teaching course 24 (International Politics)
+(13, 25),-- Instructor 13 (Law) teaching course 25 (Civil Law 1)
+(13, 26),-- Instructor 13 (Law) teaching course 26 (Criminal Law)
+(59, 27),-- Instructor 59 (Law) teaching course 27 (Commercial Law)
+(59, 28),-- Instructor 59 (Accounting) teaching course 28 (Principles of Accounting 1)
+(60, 29),-- Instructor 60 (Accounting) teaching course 29 (Advanced Accounting)
+(60, 30),-- Instructor 60 (Accounting) teaching course 30 (Cost Accounting)
+(61, 1), -- Instructor 61 (Architecture Engineering) teaching course 1 (Architectural Design 1)
+(61, 2), -- Instructor 61 (Architecture Engineering) teaching course 2 (Architectural Design 2)
+(62, 3), -- Instructor 62 (Civil Engineering) teaching course 3 (History of Architecture)
+(62, 4), -- Instructor 62 (Civil Engineering) teaching course 4 (Structural Analysis 1)
+(63, 5), -- Instructor 63 (Civil Engineering) teaching course 5 (Highway Engineering)
+(63, 6), -- Instructor 63 (Civil Engineering) teaching course 6 (Hydraulic Engineering)
+(64, 7), -- Instructor 64 (Electrical Engineering) teaching course 7 (Electrical Circuits 1)
+(64, 8), -- Instructor 64 (Electrical Engineering) teaching course 8 (Control Systems)
+(65, 9); -- Instructor 65 (Electrical Engineering) teaching course 9 (Electronics 1)
+
+
+-- Insert TA-Course associations ensuring valid ta_id values and course_id values
+
+INSERT INTO ta_course (ta_id, course_id) VALUES
+(1, 1),  -- TA 1 assisting course 1 (Architectural Design 1)
+(1, 2),  -- TA 1 assisting course 2 (Architectural Design 2)
+(2, 3),  -- TA 2 assisting course 3 (History of Architecture)
+(2, 4),  -- TA 2 assisting course 4 (Structural Analysis 1)
+(3, 5),  -- TA 3 assisting course 5 (Highway Engineering)
+(3, 6),  -- TA 3 assisting course 6 (Hydraulic Engineering)
+(4, 7),  -- TA 4 assisting course 7 (Electrical Circuits 1)
+(4, 8),  -- TA 4 assisting course 8 (Control Systems)
+(5, 9),  -- TA 5 assisting course 9 (Electronics 1)
+(5, 10), -- TA 5 assisting course 10 (Thermodynamics)
+(6, 11), -- TA 6 assisting course 11 (Fluid Mechanics)
+(6, 12), -- TA 6 assisting course 12 (Heat Transfer)
+(7, 13), -- TA 7 assisting course 13 (Programming 1)
+(7, 14), -- TA 7 assisting course 14 (Data Structures)
+(8, 15), -- TA 8 assisting course 15 (Operating Systems)
+(8, 16), -- TA 8 assisting course 16 (Principles of Management)
+(9, 17), -- TA 9 assisting course 17 (Human Resources Management)
+(9, 18), -- TA 9 assisting course 18 (Project Management)
+(10, 19),-- TA 10 assisting course 19 (Fundamentals of Nursing)
+(10, 20);-- TA 10 assisting course 20 (Adult Nursing)
+
+-- Additional associations
+INSERT INTO ta_course (ta_id, course_id) VALUES
+(11, 21),-- TA 11 assisting course 21 (Pediatric Nursing)
+(11, 22),-- TA 11 assisting course 22 (Introduction to Political Science)
+(12, 23),-- TA 12 assisting course 23 (Comparative Political Systems)
+(12, 24),-- TA 12 assisting course 24 (International Politics)
+(13, 25),-- TA 13 assisting course 25 (Civil Law 1)
+(13, 26),-- TA 13 assisting course 26 (Criminal Law)
+(14, 27),-- TA 14 assisting course 27 (Commercial Law)
+(14, 28),-- TA 14 assisting course 28 (Principles of Accounting 1)
+(15, 29),-- TA 15 assisting course 29 (Advanced Accounting)
+(15, 30),-- TA 15 assisting course 30 (Cost Accounting)
+(16, 1), -- TA 16 assisting course 1 (Architectural Design 1)
+(17, 2), -- TA 17 assisting course 2 (Architectural Design 2)
+(18, 3), -- TA 18 assisting course 3 (History of Architecture)
+(19, 4), -- TA 19 assisting course 4 (Structural Analysis 1)
+(20, 5); -- TA 20 assisting course 5 (Highway Engineering)
+
+
+-- Insert Course-Prerequisite associations ensuring valid course_id and prerequisite_id values
+
+-- General format: (course_id, prerequisite_id)
+
+INSERT INTO course_prerequisite (course_id, prerequisite_id) VALUES
+(2, 1),  -- Course 2 (Architectural Design 2) requires Course 1 (Architectural Design 1)
+(3, 1),  -- Course 3 (History of Architecture) requires Course 1 (Architectural Design 1)
+(4, 3),  -- Course 4 (Structural Analysis 1) requires Course 3 (History of Architecture)
+(5, 4),  -- Course 5 (Highway Engineering) requires Course 4 (Structural Analysis 1)
+(6, 4),  -- Course 6 (Hydraulic Engineering) requires Course 4 (Structural Analysis 1)
+(8, 7),  -- Course 8 (Control Systems) requires Course 7 (Electrical Circuits 1)
+(9, 8),  -- Course 9 (Electronics 1) requires Course 8 (Control Systems)
+(12, 10), -- Course 12 (Heat Transfer) requires Course 10 (Thermodynamics)
+(14, 13), -- Course 14 (Data Structures) requires Course 13 (Programming 1)
+(15, 14); -- Course 15 (Operating Systems) requires Course 14 (Data Structures)
+
+
+select i.name_arabic, c.name_arabic
+from instructor i, instructor_course ic, course c
+where i.id = ic.instructor_id and ic.course_id = c.id;
+
+
+
+
+

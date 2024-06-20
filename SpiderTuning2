@@ -1,0 +1,2246 @@
+{
+    "cells": [
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "1. Install dependencies"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 1,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Defaulting to user installation because normal site-packages is not writeable\n",
+                        "Requirement already satisfied: transformers in /home/ubuntu/.local/lib/python3.10/site-packages (4.41.2)\n",
+                        "Requirement already satisfied: datasets in /home/ubuntu/.local/lib/python3.10/site-packages (2.20.0)\n",
+                        "Requirement already satisfied: farasa in /home/ubuntu/.local/lib/python3.10/site-packages (0.0.1)\n",
+                        "Requirement already satisfied: filelock in /usr/local/lib/python3.10/dist-packages (from transformers) (3.14.0)\n",
+                        "Requirement already satisfied: huggingface-hub<1.0,>=0.23.0 in /home/ubuntu/.local/lib/python3.10/site-packages (from transformers) (0.23.3)\n",
+                        "Requirement already satisfied: numpy>=1.17 in /home/ubuntu/.local/lib/python3.10/site-packages (from transformers) (1.26.4)\n",
+                        "Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.10/dist-packages (from transformers) (21.3)\n",
+                        "Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.10/dist-packages (from transformers) (6.0.1)\n",
+                        "Requirement already satisfied: regex!=2019.12.17 in /home/ubuntu/.local/lib/python3.10/site-packages (from transformers) (2024.5.15)\n",
+                        "Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from transformers) (2.32.3)\n",
+                        "Requirement already satisfied: tokenizers<0.20,>=0.19 in /home/ubuntu/.local/lib/python3.10/site-packages (from transformers) (0.19.1)\n",
+                        "Requirement already satisfied: safetensors>=0.4.1 in /home/ubuntu/.local/lib/python3.10/site-packages (from transformers) (0.4.3)\n",
+                        "Requirement already satisfied: tqdm>=4.27 in /usr/local/lib/python3.10/dist-packages (from transformers) (4.66.4)\n",
+                        "Requirement already satisfied: pyarrow>=15.0.0 in /home/ubuntu/.local/lib/python3.10/site-packages (from datasets) (16.1.0)\n",
+                        "Requirement already satisfied: pyarrow-hotfix in /home/ubuntu/.local/lib/python3.10/site-packages (from datasets) (0.6)\n",
+                        "Requirement already satisfied: dill<0.3.9,>=0.3.0 in /usr/local/lib/python3.10/dist-packages (from datasets) (0.3.8)\n",
+                        "Requirement already satisfied: pandas in /home/ubuntu/.local/lib/python3.10/site-packages (from datasets) (2.2.2)\n",
+                        "Requirement already satisfied: xxhash in /home/ubuntu/.local/lib/python3.10/site-packages (from datasets) (3.4.1)\n",
+                        "Requirement already satisfied: multiprocess in /home/ubuntu/.local/lib/python3.10/site-packages (from datasets) (0.70.16)\n",
+                        "Requirement already satisfied: fsspec<=2024.5.0,>=2023.1.0 in /home/ubuntu/.local/lib/python3.10/site-packages (from fsspec[http]<=2024.5.0,>=2023.1.0->datasets) (2024.5.0)\n",
+                        "Requirement already satisfied: aiohttp in /usr/local/lib/python3.10/dist-packages (from datasets) (3.9.5)\n",
+                        "Requirement already satisfied: aiosignal>=1.1.2 in /usr/local/lib/python3.10/dist-packages (from aiohttp->datasets) (1.3.1)\n",
+                        "Requirement already satisfied: attrs>=17.3.0 in /usr/local/lib/python3.10/dist-packages (from aiohttp->datasets) (23.2.0)\n",
+                        "Requirement already satisfied: frozenlist>=1.1.1 in /usr/local/lib/python3.10/dist-packages (from aiohttp->datasets) (1.4.1)\n",
+                        "Requirement already satisfied: multidict<7.0,>=4.5 in /usr/local/lib/python3.10/dist-packages (from aiohttp->datasets) (6.0.5)\n",
+                        "Requirement already satisfied: yarl<2.0,>=1.0 in /usr/local/lib/python3.10/dist-packages (from aiohttp->datasets) (1.9.4)\n",
+                        "Requirement already satisfied: async-timeout<5.0,>=4.0 in /usr/local/lib/python3.10/dist-packages (from aiohttp->datasets) (4.0.3)\n",
+                        "Requirement already satisfied: typing-extensions>=3.7.4.3 in /usr/local/lib/python3.10/dist-packages (from huggingface-hub<1.0,>=0.23.0->transformers) (4.12.2)\n",
+                        "Requirement already satisfied: pyparsing!=3.0.5,>=2.0.2 in /usr/local/lib/python3.10/dist-packages (from packaging>=20.0->transformers) (3.1.2)\n",
+                        "Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests->transformers) (3.3.2)\n",
+                        "Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests->transformers) (3.7)\n",
+                        "Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests->transformers) (2.2.1)\n",
+                        "Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests->transformers) (2024.6.2)\n",
+                        "Requirement already satisfied: python-dateutil>=2.8.2 in /usr/local/lib/python3.10/dist-packages (from pandas->datasets) (2.9.0.post0)\n",
+                        "Requirement already satisfied: pytz>=2020.1 in /usr/lib/python3/dist-packages (from pandas->datasets) (2022.1)\n",
+                        "Requirement already satisfied: tzdata>=2022.7 in /usr/local/lib/python3.10/dist-packages (from pandas->datasets) (2024.1)\n",
+                        "Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.10/dist-packages (from python-dateutil>=2.8.2->pandas->datasets) (1.16.0)\n",
+                        "\u001b[33mDEPRECATION: devscripts 2.22.1ubuntu1 has a non-standard version number. pip 24.1 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of devscripts or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063\u001b[0m\u001b[33m\n",
+                        "\u001b[0m"
+                    ]
+                }
+            ],
+            "source": [
+                "!pip install transformers datasets farasa\n"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "2. Load the Fine-Tuned Model on WikiSQL and Test it with Simple Query"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 2,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/usr/local/lib/python3.10/dist-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html\n",
+                        "  from .autonotebook import tqdm as notebook_tqdm\n",
+                        "2024-06-19 14:53:01.608196: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.\n",
+                        "To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.\n",
+                        "2024-06-19 14:53:04.884614: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT\n",
+                        "You are using the default legacy behaviour of the <class 'transformers.models.t5.tokenization_t5.T5Tokenizer'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565\n"
+                    ]
+                }
+            ],
+            "source": [
+                "import json\n",
+                "import random\n",
+                "from sklearn.model_selection import train_test_split\n",
+                "from transformers import T5Tokenizer, T5ForConditionalGeneration, Trainer, TrainingArguments\n",
+                "from datasets import load_metric\n",
+                "\n",
+                "model_name = 'obada-jaras/AraT5-TranslatedWikiSQLNLtoSQL'\n",
+                "tokenizer = T5Tokenizer.from_pretrained(model_name)\n",
+                "model = T5ForConditionalGeneration.from_pretrained(model_name)"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 3,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Defaulting to user installation because normal site-packages is not writeable\n",
+                        "Requirement already satisfied: tf-keras in /home/ubuntu/.local/lib/python3.10/site-packages (2.16.0)\n",
+                        "Requirement already satisfied: tensorflow<2.17,>=2.16 in /home/ubuntu/.local/lib/python3.10/site-packages (from tf-keras) (2.16.1)\n",
+                        "Requirement already satisfied: absl-py>=1.0.0 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorflow<2.17,>=2.16->tf-keras) (2.1.0)\n",
+                        "Requirement already satisfied: astunparse>=1.6.0 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorflow<2.17,>=2.16->tf-keras) (1.6.3)\n",
+                        "Requirement already satisfied: flatbuffers>=23.5.26 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorflow<2.17,>=2.16->tf-keras) (24.3.25)\n",
+                        "Requirement already satisfied: gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorflow<2.17,>=2.16->tf-keras) (0.5.4)\n",
+                        "Requirement already satisfied: google-pasta>=0.1.1 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorflow<2.17,>=2.16->tf-keras) (0.2.0)\n",
+                        "Requirement already satisfied: h5py>=3.10.0 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorflow<2.17,>=2.16->tf-keras) (3.11.0)\n",
+                        "Requirement already satisfied: libclang>=13.0.0 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorflow<2.17,>=2.16->tf-keras) (18.1.1)\n",
+                        "Requirement already satisfied: ml-dtypes~=0.3.1 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorflow<2.17,>=2.16->tf-keras) (0.3.2)\n",
+                        "Requirement already satisfied: opt-einsum>=2.3.2 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorflow<2.17,>=2.16->tf-keras) (3.3.0)\n",
+                        "Requirement already satisfied: packaging in /usr/local/lib/python3.10/dist-packages (from tensorflow<2.17,>=2.16->tf-keras) (21.3)\n",
+                        "Requirement already satisfied: protobuf!=4.21.0,!=4.21.1,!=4.21.2,!=4.21.3,!=4.21.4,!=4.21.5,<5.0.0dev,>=3.20.3 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorflow<2.17,>=2.16->tf-keras) (4.25.3)\n",
+                        "Requirement already satisfied: requests<3,>=2.21.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow<2.17,>=2.16->tf-keras) (2.32.3)\n",
+                        "Requirement already satisfied: setuptools in /usr/local/lib/python3.10/dist-packages (from tensorflow<2.17,>=2.16->tf-keras) (70.0.0)\n",
+                        "Requirement already satisfied: six>=1.12.0 in /usr/local/lib/python3.10/dist-packages (from tensorflow<2.17,>=2.16->tf-keras) (1.16.0)\n",
+                        "Requirement already satisfied: termcolor>=1.1.0 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorflow<2.17,>=2.16->tf-keras) (2.4.0)\n",
+                        "Requirement already satisfied: typing-extensions>=3.6.6 in /usr/local/lib/python3.10/dist-packages (from tensorflow<2.17,>=2.16->tf-keras) (4.12.2)\n",
+                        "Requirement already satisfied: wrapt>=1.11.0 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorflow<2.17,>=2.16->tf-keras) (1.16.0)\n",
+                        "Requirement already satisfied: grpcio<2.0,>=1.24.3 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorflow<2.17,>=2.16->tf-keras) (1.64.1)\n",
+                        "Requirement already satisfied: tensorboard<2.17,>=2.16 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorflow<2.17,>=2.16->tf-keras) (2.16.2)\n",
+                        "Requirement already satisfied: keras>=3.0.0 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorflow<2.17,>=2.16->tf-keras) (3.3.3)\n",
+                        "Requirement already satisfied: tensorflow-io-gcs-filesystem>=0.23.1 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorflow<2.17,>=2.16->tf-keras) (0.37.0)\n",
+                        "Requirement already satisfied: numpy<2.0.0,>=1.23.5 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorflow<2.17,>=2.16->tf-keras) (1.26.4)\n",
+                        "Requirement already satisfied: wheel<1.0,>=0.23.0 in /usr/local/lib/python3.10/dist-packages (from astunparse>=1.6.0->tensorflow<2.17,>=2.16->tf-keras) (0.43.0)\n",
+                        "Requirement already satisfied: rich in /usr/local/lib/python3.10/dist-packages (from keras>=3.0.0->tensorflow<2.17,>=2.16->tf-keras) (13.7.1)\n",
+                        "Requirement already satisfied: namex in /home/ubuntu/.local/lib/python3.10/site-packages (from keras>=3.0.0->tensorflow<2.17,>=2.16->tf-keras) (0.0.8)\n",
+                        "Requirement already satisfied: optree in /home/ubuntu/.local/lib/python3.10/site-packages (from keras>=3.0.0->tensorflow<2.17,>=2.16->tf-keras) (0.11.0)\n",
+                        "Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests<3,>=2.21.0->tensorflow<2.17,>=2.16->tf-keras) (3.3.2)\n",
+                        "Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests<3,>=2.21.0->tensorflow<2.17,>=2.16->tf-keras) (3.7)\n",
+                        "Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests<3,>=2.21.0->tensorflow<2.17,>=2.16->tf-keras) (2.2.1)\n",
+                        "Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests<3,>=2.21.0->tensorflow<2.17,>=2.16->tf-keras) (2024.6.2)\n",
+                        "Requirement already satisfied: markdown>=2.6.8 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorboard<2.17,>=2.16->tensorflow<2.17,>=2.16->tf-keras) (3.6)\n",
+                        "Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in /home/ubuntu/.local/lib/python3.10/site-packages (from tensorboard<2.17,>=2.16->tensorflow<2.17,>=2.16->tf-keras) (0.7.2)\n",
+                        "Requirement already satisfied: werkzeug>=1.0.1 in /usr/local/lib/python3.10/dist-packages (from tensorboard<2.17,>=2.16->tensorflow<2.17,>=2.16->tf-keras) (3.0.3)\n",
+                        "Requirement already satisfied: pyparsing!=3.0.5,>=2.0.2 in /usr/local/lib/python3.10/dist-packages (from packaging->tensorflow<2.17,>=2.16->tf-keras) (3.1.2)\n",
+                        "Requirement already satisfied: MarkupSafe>=2.1.1 in /usr/local/lib/python3.10/dist-packages (from werkzeug>=1.0.1->tensorboard<2.17,>=2.16->tensorflow<2.17,>=2.16->tf-keras) (2.1.5)\n",
+                        "Requirement already satisfied: markdown-it-py>=2.2.0 in /usr/local/lib/python3.10/dist-packages (from rich->keras>=3.0.0->tensorflow<2.17,>=2.16->tf-keras) (3.0.0)\n",
+                        "Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /usr/local/lib/python3.10/dist-packages (from rich->keras>=3.0.0->tensorflow<2.17,>=2.16->tf-keras) (2.18.0)\n",
+                        "Requirement already satisfied: mdurl~=0.1 in /usr/local/lib/python3.10/dist-packages (from markdown-it-py>=2.2.0->rich->keras>=3.0.0->tensorflow<2.17,>=2.16->tf-keras) (0.1.2)\n",
+                        "\u001b[33mDEPRECATION: devscripts 2.22.1ubuntu1 has a non-standard version number. pip 24.1 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of devscripts or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063\u001b[0m\u001b[33m\n",
+                        "\u001b[0m"
+                    ]
+                }
+            ],
+            "source": [
+                "!pip install tf-keras"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 6,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n"
+                    ]
+                },
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Generated SQL: SELECT City FROM table WHERE Country = indiana\n"
+                    ]
+                }
+            ],
+            "source": [
+                "def generate_sql(query, model, tokenizer):\n",
+                "    inputs = tokenizer(query, return_tensors=\"pt\")\n",
+                "    outputs = model.generate(**inputs)\n",
+                "    return tokenizer.decode(outputs[0], skip_special_tokens=True)\n",
+                "\n",
+                "# Example Arabic query\n",
+                "test_query = \"ما هي عاصمة فلسطين؟\"\n",
+                "\n",
+                "# Generate and print the SQL query\n",
+                "generated_sql = generate_sql(test_query, model, tokenizer)\n",
+                "print(f\"Generated SQL: {generated_sql}\")"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "3. Improvements on the model\n"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "3.1 **create a dummy dataset contains variety of entitites and questions related to them**:\n",
+                "in order to improve the model recognition of entitites (same as NER approach)"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 46,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Improved dummy dataset created with 20,000 samples.\n"
+                    ]
+                }
+            ],
+            "source": [
+                "import json\n",
+                "import random\n",
+                "\n",
+                "# Extended sample entities\n",
+                "countries = [\"مصر\", \"السعودية\", \"الأردن\", \"فلسطين\", \"الجزائر\", \"العراق\", \"سوريا\", \"لبنان\", \"الكويت\", \"عمان\"]\n",
+                "colleges = [\"الهندسة\", \"الطب\", \"الحقوق\", \"الأداب\", \"العلوم\", \"التجارة\", \"التربية\", \"الفنون\", \"الزراعة\"]\n",
+                "courses = [\"الرياضيات\", \"الفيزياء\", \"الكيمياء\", \"البرمجة\", \"الأحياء\", \"التاريخ\", \"الجغرافيا\", \"الفلسفة\", \"الاقتصاد\"]\n",
+                "departments = [\"علوم الحاسوب\", \"الهندسة المدنية\", \"الهندسة الميكانيكية\", \"اللغة العربية\", \"علم النفس\", \"اللغة الإنجليزية\"]\n",
+                "instructors = [\"د. أحمد\", \"د. محمد\", \"د. علي\", \"د. فاطمة\", \"د. سارة\", \"د. يوسف\", \"د. خالد\", \"د. مريم\"]\n",
+                "sports = [\"كرة القدم\", \"كرة السلة\", \"التنس\", \"السباحة\", \"الجري\", \"البيسبول\", \"الكريكيت\", \"الجولف\"]\n",
+                "players = [\"محمد صلاح\", \"ليبرون جيمس\", \"روجر فيدرير\", \"مايكل فيلبس\", \"أوسين بولت\", \"كريستيانو رونالدو\", \"ليونيل ميسي\"]\n",
+                "teams = [\"ريال مدريد\", \"برشلونة\", \"مانشستر يونايتد\", \"ليفربول\", \"يوفنتوس\", \"بايرن ميونيخ\", \"تشيلسي\", \"أرسنال\"]\n",
+                "\n",
+                "# Generate dummy dataset\n",
+                "data = []\n",
+                "\n",
+                "# Generate country-related questions\n",
+                "for _ in range(5000):\n",
+                "    country = random.choice(countries)\n",
+                "    questions = [\n",
+                "        f\"ما هي عاصمة {country}؟\",\n",
+                "        f\"ما هو عدد سكان {country}؟\",\n",
+                "        f\"ما هي اللغة الرسمية في {country}؟\"\n",
+                "    ]\n",
+                "    outputs = [\n",
+                "        f\"SELECT capital FROM countries WHERE name = '{country}'\",\n",
+                "        f\"SELECT population FROM countries WHERE name = '{country}'\",\n",
+                "        f\"SELECT official_language FROM countries WHERE name = '{country}'\"\n",
+                "    ]\n",
+                "    for question, output in zip(questions, outputs):\n",
+                "        data.append({\"input\": question, \"output\": output})\n",
+                "\n",
+                "# Generate college-related questions\n",
+                "for _ in range(5000):\n",
+                "    college = random.choice(colleges)\n",
+                "    course = random.choice(courses)\n",
+                "    department = random.choice(departments)\n",
+                "    instructor = random.choice(instructors)\n",
+                "    questions = [\n",
+                "        f\"ما هي الدورات المقدمة في كلية {college}؟\",\n",
+                "        f\"من هو رئيس قسم {department}؟\",\n",
+                "        f\"ما هي المقررات التي يدرسها {instructor}؟\",\n",
+                "        f\"ما هي مواد دورة {course}؟\"\n",
+                "    ]\n",
+                "    outputs = [\n",
+                "        f\"SELECT courses FROM colleges WHERE name = '{college}'\",\n",
+                "        f\"SELECT head FROM departments WHERE name = '{department}'\",\n",
+                "        f\"SELECT courses FROM instructors WHERE name = '{instructor}'\",\n",
+                "        f\"SELECT materials FROM courses WHERE name = '{course}'\"\n",
+                "    ]\n",
+                "    for question, output in zip(questions, outputs):\n",
+                "        data.append({\"input\": question, \"output\": output})\n",
+                "\n",
+                "# Generate sports-related questions\n",
+                "for _ in range(5000):\n",
+                "    sport = random.choice(sports)\n",
+                "    player = random.choice(players)\n",
+                "    team = random.choice(teams)\n",
+                "    questions = [\n",
+                "        f\"من هو اللاعب الذي فاز بجائزة أفضل لاعب في {sport}؟\",\n",
+                "        f\"ما هي إحصائيات {player}؟\",\n",
+                "        f\"كم عدد البطولات التي فاز بها فريق {team}؟\"\n",
+                "    ]\n",
+                "    outputs = [\n",
+                "        f\"SELECT best_player FROM sports WHERE name = '{sport}'\",\n",
+                "        f\"SELECT stats FROM players WHERE name = '{player}'\",\n",
+                "        f\"SELECT championships FROM teams WHERE name = '{team}'\"\n",
+                "    ]\n",
+                "    for question, output in zip(questions, outputs):\n",
+                "        data.append({\"input\": question, \"output\": output})\n",
+                "\n",
+                "# Randomize the data\n",
+                "random.shuffle(data)\n",
+                "\n",
+                "# Save to JSON file\n",
+                "with open('Datasets/dummy/dummy_dataset_improved.json', 'w', encoding='utf-8') as f:\n",
+                "    json.dump(data, f, ensure_ascii=False, indent=4)\n",
+                "\n",
+                "print(\"Improved dummy dataset created with 20,000 samples.\")\n"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "3.2 **Fine-Tuning the model on this dataset**"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 5,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "import json\n",
+                "from transformers import T5Tokenizer, T5ForConditionalGeneration, Trainer, TrainingArguments\n",
+                "from datasets import load_dataset, Dataset"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 6,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "# Cell 3: Load the dummy dataset\n",
+                "with open('Datasets/dummy/dummy_dataset_improved.json', 'r', encoding='utf-8') as f:\n",
+                "    dummy_data = json.load(f)\n",
+                "\n",
+                "# Cell 4: Load a subset of the original dataset\n",
+                "# Assume original_data.json is available which contains the original training data\n",
+                "with open('Datasets/step_one/test_data.json', 'r', encoding='utf-8') as f:\n",
+                "    original_data = json.load(f)\n",
+                "\n",
+                "# Combine both datasets\n",
+                "combined_data = dummy_data + original_data  # Mixing equal proportions for balance\n",
+                "\n",
+                "# Convert the combined data to HuggingFace dataset format\n",
+                "dataset = Dataset.from_dict({\n",
+                "    'input': [item['input'] for item in combined_data],\n",
+                "    'output': [item['output'] for item in combined_data]\n",
+                "})\n",
+                "\n",
+                "# Split the dataset into training and validation sets\n",
+                "dataset = dataset.train_test_split(test_size=0.1)\n"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 7,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "import json\n",
+                "from transformers import T5Tokenizer, T5ForConditionalGeneration, Seq2SeqTrainingArguments, Seq2SeqTrainer\n",
+                "from datasets import load_dataset, Dataset, load_metric"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 8,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "Map:   0%|          | 0/84556 [00:00<?, ? examples/s]/home/ubuntu/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3946: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.\n",
+                        "  warnings.warn(\n",
+                        "Map: 100%|██████████| 84556/84556 [00:26<00:00, 3248.67 examples/s]\n",
+                        "Map: 100%|██████████| 9396/9396 [00:02<00:00, 3345.72 examples/s]\n"
+                    ]
+                }
+            ],
+            "source": [
+                "# Cell 5: Preprocess the data\n",
+                "def preprocess_function(examples):\n",
+                "    inputs = [example for example in examples['input']]\n",
+                "    targets = [example for example in examples['output']]\n",
+                "    model_inputs = tokenizer(inputs, max_length=512, padding='max_length', truncation=True)\n",
+                "\n",
+                "    # Set up the tokenizer for targets\n",
+                "    with tokenizer.as_target_tokenizer():\n",
+                "        labels = tokenizer(targets, max_length=512, padding='max_length', truncation=True)\n",
+                "\n",
+                "    model_inputs[\"labels\"] = labels[\"input_ids\"]\n",
+                "    return model_inputs\n",
+                "\n",
+                "tokenized_datasets = dataset.map(preprocess_function, batched=True)"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 9,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/tmp/ipykernel_28732/736800081.py:2: FutureWarning: load_metric is deprecated and will be removed in the next major version of datasets. Use 'evaluate.load' instead, from the new library 🤗 Evaluate: https://huggingface.co/docs/evaluate\n",
+                        "  metric = load_metric(\"sacrebleu\")\n"
+                    ]
+                }
+            ],
+            "source": [
+                "# Cell 6: Define metrics for evaluation\n",
+                "metric = load_metric(\"sacrebleu\")\n",
+                "\n",
+                "def compute_metrics(eval_preds):\n",
+                "    preds, labels = eval_preds\n",
+                "    decoded_preds = tokenizer.batch_decode(preds, skip_special_tokens=True)\n",
+                "    decoded_labels = tokenizer.batch_decode(labels, skip_special_tokens=True)\n",
+                "    \n",
+                "    # Replace -100 in the labels as we can't decode them\n",
+                "    decoded_labels = [[label] for label in decoded_labels]\n",
+                "    \n",
+                "    result = metric.compute(predictions=decoded_preds, references=decoded_labels)\n",
+                "    result = {\"bleu\": result[\"score\"]}\n",
+                "    return result"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 10,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/training_args.py:1474: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead\n",
+                        "  warnings.warn(\n"
+                    ]
+                }
+            ],
+            "source": [
+                "\n",
+                "# Cell 7: Set up training arguments\n",
+                "training_args = Seq2SeqTrainingArguments(\n",
+                "    output_dir='./model',               # output directory\n",
+                "    overwrite_output_dir=True,          # overwrite the content of the output directory\n",
+                "    learning_rate=3e-5,                 # learning rate\n",
+                "    per_device_train_batch_size=4,      # batch size for training\n",
+                "    per_device_eval_batch_size=4,       # batch size for evaluation\n",
+                "    num_train_epochs=2,                 # total number of training epochs\n",
+                "    evaluation_strategy=\"epoch\",        # evaluate every epoch\n",
+                "    save_strategy=\"epoch\",              # save checkpoint every epoch\n",
+                "    save_total_limit=3,                 # limit to 3 checkpoints\n",
+                "    load_best_model_at_end=True,        # load the best model at the end of training\n",
+                "    metric_for_best_model=\"bleu\",       # metric to use for model selection\n",
+                "    greater_is_better=True,             # the higher the metric the better\n",
+                "    predict_with_generate=True,         # use generate to calculate metrics\n",
+                "    logging_dir='./logs',               # directory for storing logs\n",
+                "    logging_strategy=\"epoch\",           # log every epoch\n",
+                ")"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 11,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "[2024-06-18 18:57:25,535] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)\n",
+                        "\u001b[93m [WARNING] \u001b[0m async_io requires the dev libaio .so object and headers but these were not found.\n",
+                        "\u001b[93m [WARNING] \u001b[0m async_io: please install the libaio-dev package with apt\n",
+                        "\u001b[93m [WARNING] \u001b[0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.\n",
+                        "\u001b[93m [WARNING] \u001b[0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH\n"
+                    ]
+                },
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/bin/ld: cannot find -laio: No such file or directory\n",
+                        "collect2: error: ld returned 1 exit status\n"
+                    ]
+                },
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "\u001b[93m [WARNING] \u001b[0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3\n",
+                        "\u001b[93m [WARNING] \u001b[0m using untested triton version (2.3.1), only 1.0.0 is known to be compatible\n"
+                    ]
+                },
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n",
+                        "  warnings.warn('Was asked to gather along dimension 0, but all '\n"
+                    ]
+                },
+                {
+                    "data": {
+                        "text/html": [
+                            "\n",
+                            "    <div>\n",
+                            "      \n",
+                            "      <progress value='5339' max='10570' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
+                            "      [ 5339/10570 2:36:18 < 2:33:12, 0.57 it/s, Epoch 1.01/2]\n",
+                            "    </div>\n",
+                            "    <table border=\"1\" class=\"dataframe\">\n",
+                            "  <thead>\n",
+                            " <tr style=\"text-align: left;\">\n",
+                            "      <th>Epoch</th>\n",
+                            "      <th>Training Loss</th>\n",
+                            "      <th>Validation Loss</th>\n",
+                            "      <th>Bleu</th>\n",
+                            "    </tr>\n",
+                            "  </thead>\n",
+                            "  <tbody>\n",
+                            "    <tr>\n",
+                            "      <td>1</td>\n",
+                            "      <td>0.132000</td>\n",
+                            "      <td>0.027947</td>\n",
+                            "      <td>67.288613</td>\n",
+                            "    </tr>\n",
+                            "  </tbody>\n",
+                            "</table><p>"
+                        ],
+                        "text/plain": [
+                            "<IPython.core.display.HTML object>"
+                        ]
+                    },
+                    "metadata": {},
+                    "output_type": "display_data"
+                },
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n",
+                        "  warnings.warn('Was asked to gather along dimension 0, but all '\n"
+                    ]
+                },
+                {
+                    "ename": "KeyboardInterrupt",
+                    "evalue": "",
+                    "output_type": "error",
+                    "traceback": [
+                        "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+                        "\u001b[0;31mKeyboardInterrupt\u001b[0m                         Traceback (most recent call last)",
+                        "Cell \u001b[0;32mIn[11], line 13\u001b[0m\n\u001b[1;32m      3\u001b[0m trainer \u001b[38;5;241m=\u001b[39m Seq2SeqTrainer(\n\u001b[1;32m      4\u001b[0m     model\u001b[38;5;241m=\u001b[39mmodel,\n\u001b[1;32m      5\u001b[0m     args\u001b[38;5;241m=\u001b[39mtraining_args,\n\u001b[0;32m   (...)\u001b[0m\n\u001b[1;32m      9\u001b[0m     compute_metrics\u001b[38;5;241m=\u001b[39mcompute_metrics,\n\u001b[1;32m     10\u001b[0m )\n\u001b[1;32m     12\u001b[0m \u001b[38;5;66;03m# Cell 9: Fine-tune the model\u001b[39;00m\n\u001b[0;32m---> 13\u001b[0m \u001b[43mtrainer\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mtrain\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m     15\u001b[0m \u001b[38;5;66;03m# Cell 9: Save the fine-tuned model\u001b[39;00m\n\u001b[1;32m     16\u001b[0m model\u001b[38;5;241m.\u001b[39msave_pretrained(\u001b[38;5;124m'\u001b[39m\u001b[38;5;124m./improved_araT5\u001b[39m\u001b[38;5;124m'\u001b[39m)\n",
+                        "File \u001b[0;32m~/.local/lib/python3.10/site-packages/transformers/trainer.py:1885\u001b[0m, in \u001b[0;36mTrainer.train\u001b[0;34m(self, resume_from_checkpoint, trial, ignore_keys_for_eval, **kwargs)\u001b[0m\n\u001b[1;32m   1883\u001b[0m         hf_hub_utils\u001b[38;5;241m.\u001b[39menable_progress_bars()\n\u001b[1;32m   1884\u001b[0m \u001b[38;5;28;01melse\u001b[39;00m:\n\u001b[0;32m-> 1885\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[43minner_training_loop\u001b[49m\u001b[43m(\u001b[49m\n\u001b[1;32m   1886\u001b[0m \u001b[43m        \u001b[49m\u001b[43margs\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[43margs\u001b[49m\u001b[43m,\u001b[49m\n\u001b[1;32m   1887\u001b[0m \u001b[43m        \u001b[49m\u001b[43mresume_from_checkpoint\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[43mresume_from_checkpoint\u001b[49m\u001b[43m,\u001b[49m\n\u001b[1;32m   1888\u001b[0m \u001b[43m        \u001b[49m\u001b[43mtrial\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[43mtrial\u001b[49m\u001b[43m,\u001b[49m\n\u001b[1;32m   1889\u001b[0m \u001b[43m        \u001b[49m\u001b[43mignore_keys_for_eval\u001b[49m\u001b[38;5;241;43m=\u001b[39;49m\u001b[43mignore_keys_for_eval\u001b[49m\u001b[43m,\u001b[49m\n\u001b[1;32m   1890\u001b[0m \u001b[43m    \u001b[49m\u001b[43m)\u001b[49m\n",
+                        "File \u001b[0;32m~/.local/lib/python3.10/site-packages/transformers/trainer.py:2216\u001b[0m, in \u001b[0;36mTrainer._inner_training_loop\u001b[0;34m(self, batch_size, args, resume_from_checkpoint, trial, ignore_keys_for_eval)\u001b[0m\n\u001b[1;32m   2213\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mcontrol \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mcallback_handler\u001b[38;5;241m.\u001b[39mon_step_begin(args, \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mstate, \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mcontrol)\n\u001b[1;32m   2215\u001b[0m \u001b[38;5;28;01mwith\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39maccelerator\u001b[38;5;241m.\u001b[39maccumulate(model):\n\u001b[0;32m-> 2216\u001b[0m     tr_loss_step \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mtraining_step\u001b[49m\u001b[43m(\u001b[49m\u001b[43mmodel\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43minputs\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m   2218\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m (\n\u001b[1;32m   2219\u001b[0m     args\u001b[38;5;241m.\u001b[39mlogging_nan_inf_filter\n\u001b[1;32m   2220\u001b[0m     \u001b[38;5;129;01mand\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m is_torch_xla_available()\n\u001b[1;32m   2221\u001b[0m     \u001b[38;5;129;01mand\u001b[39;00m (torch\u001b[38;5;241m.\u001b[39misnan(tr_loss_step) \u001b[38;5;129;01mor\u001b[39;00m torch\u001b[38;5;241m.\u001b[39misinf(tr_loss_step))\n\u001b[1;32m   2222\u001b[0m ):\n\u001b[1;32m   2223\u001b[0m     \u001b[38;5;66;03m# if loss is nan or inf simply add the average of previous logged losses\u001b[39;00m\n\u001b[1;32m   2224\u001b[0m     tr_loss \u001b[38;5;241m+\u001b[39m\u001b[38;5;241m=\u001b[39m tr_loss \u001b[38;5;241m/\u001b[39m (\u001b[38;5;241m1\u001b[39m \u001b[38;5;241m+\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mstate\u001b[38;5;241m.\u001b[39mglobal_step \u001b[38;5;241m-\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_globalstep_last_logged)\n",
+                        "File \u001b[0;32m~/.local/lib/python3.10/site-packages/transformers/trainer.py:3238\u001b[0m, in \u001b[0;36mTrainer.training_step\u001b[0;34m(self, model, inputs)\u001b[0m\n\u001b[1;32m   3235\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m loss_mb\u001b[38;5;241m.\u001b[39mreduce_mean()\u001b[38;5;241m.\u001b[39mdetach()\u001b[38;5;241m.\u001b[39mto(\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39margs\u001b[38;5;241m.\u001b[39mdevice)\n\u001b[1;32m   3237\u001b[0m \u001b[38;5;28;01mwith\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mcompute_loss_context_manager():\n\u001b[0;32m-> 3238\u001b[0m     loss \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mcompute_loss\u001b[49m\u001b[43m(\u001b[49m\u001b[43mmodel\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43minputs\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m   3240\u001b[0m \u001b[38;5;28;01mdel\u001b[39;00m inputs\n\u001b[1;32m   3241\u001b[0m torch\u001b[38;5;241m.\u001b[39mcuda\u001b[38;5;241m.\u001b[39mempty_cache()\n",
+                        "File \u001b[0;32m~/.local/lib/python3.10/site-packages/transformers/trainer.py:3264\u001b[0m, in \u001b[0;36mTrainer.compute_loss\u001b[0;34m(self, model, inputs, return_outputs)\u001b[0m\n\u001b[1;32m   3262\u001b[0m \u001b[38;5;28;01melse\u001b[39;00m:\n\u001b[1;32m   3263\u001b[0m     labels \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;01mNone\u001b[39;00m\n\u001b[0;32m-> 3264\u001b[0m outputs \u001b[38;5;241m=\u001b[39m \u001b[43mmodel\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[43minputs\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m   3265\u001b[0m \u001b[38;5;66;03m# Save past state if it exists\u001b[39;00m\n\u001b[1;32m   3266\u001b[0m \u001b[38;5;66;03m# TODO: this needs to be fixed and made cleaner later.\u001b[39;00m\n\u001b[1;32m   3267\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39margs\u001b[38;5;241m.\u001b[39mpast_index \u001b[38;5;241m>\u001b[39m\u001b[38;5;241m=\u001b[39m \u001b[38;5;241m0\u001b[39m:\n",
+                        "File \u001b[0;32m~/.local/lib/python3.10/site-packages/torch/nn/modules/module.py:1532\u001b[0m, in \u001b[0;36mModule._wrapped_call_impl\u001b[0;34m(self, *args, **kwargs)\u001b[0m\n\u001b[1;32m   1530\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_compiled_call_impl(\u001b[38;5;241m*\u001b[39margs, \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mkwargs)  \u001b[38;5;66;03m# type: ignore[misc]\u001b[39;00m\n\u001b[1;32m   1531\u001b[0m \u001b[38;5;28;01melse\u001b[39;00m:\n\u001b[0;32m-> 1532\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_call_impl\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[43margs\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[43mkwargs\u001b[49m\u001b[43m)\u001b[49m\n",
+                        "File \u001b[0;32m~/.local/lib/python3.10/site-packages/torch/nn/modules/module.py:1541\u001b[0m, in \u001b[0;36mModule._call_impl\u001b[0;34m(self, *args, **kwargs)\u001b[0m\n\u001b[1;32m   1536\u001b[0m \u001b[38;5;66;03m# If we don't have any hooks, we want to skip the rest of the logic in\u001b[39;00m\n\u001b[1;32m   1537\u001b[0m \u001b[38;5;66;03m# this function, and just call forward.\u001b[39;00m\n\u001b[1;32m   1538\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m \u001b[38;5;129;01mnot\u001b[39;00m (\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_backward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_forward_pre_hooks\n\u001b[1;32m   1539\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_backward_pre_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_backward_hooks\n\u001b[1;32m   1540\u001b[0m         \u001b[38;5;129;01mor\u001b[39;00m _global_forward_hooks \u001b[38;5;129;01mor\u001b[39;00m _global_forward_pre_hooks):\n\u001b[0;32m-> 1541\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[43mforward_call\u001b[49m\u001b[43m(\u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[43margs\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[38;5;241;43m*\u001b[39;49m\u001b[43mkwargs\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m   1543\u001b[0m \u001b[38;5;28;01mtry\u001b[39;00m:\n\u001b[1;32m   1544\u001b[0m     result \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;01mNone\u001b[39;00m\n",
+                        "File \u001b[0;32m~/.local/lib/python3.10/site-packages/torch/nn/parallel/data_parallel.py:185\u001b[0m, in \u001b[0;36mDataParallel.forward\u001b[0;34m(self, *inputs, **kwargs)\u001b[0m\n\u001b[1;32m    183\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mmodule(\u001b[38;5;241m*\u001b[39minputs[\u001b[38;5;241m0\u001b[39m], \u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mmodule_kwargs[\u001b[38;5;241m0\u001b[39m])\n\u001b[1;32m    184\u001b[0m replicas \u001b[38;5;241m=\u001b[39m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mreplicate(\u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mmodule, \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mdevice_ids[:\u001b[38;5;28mlen\u001b[39m(inputs)])\n\u001b[0;32m--> 185\u001b[0m outputs \u001b[38;5;241m=\u001b[39m \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mparallel_apply\u001b[49m\u001b[43m(\u001b[49m\u001b[43mreplicas\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43minputs\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mmodule_kwargs\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m    186\u001b[0m \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39mgather(outputs, \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39moutput_device)\n",
+                        "File \u001b[0;32m~/.local/lib/python3.10/site-packages/torch/nn/parallel/data_parallel.py:200\u001b[0m, in \u001b[0;36mDataParallel.parallel_apply\u001b[0;34m(self, replicas, inputs, kwargs)\u001b[0m\n\u001b[1;32m    199\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m \u001b[38;5;21mparallel_apply\u001b[39m(\u001b[38;5;28mself\u001b[39m, replicas: Sequence[T], inputs: Sequence[Any], kwargs: Any) \u001b[38;5;241m-\u001b[39m\u001b[38;5;241m>\u001b[39m List[Any]:\n\u001b[0;32m--> 200\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m \u001b[43mparallel_apply\u001b[49m\u001b[43m(\u001b[49m\u001b[43mreplicas\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43minputs\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mkwargs\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mdevice_ids\u001b[49m\u001b[43m[\u001b[49m\u001b[43m:\u001b[49m\u001b[38;5;28;43mlen\u001b[39;49m\u001b[43m(\u001b[49m\u001b[43mreplicas\u001b[49m\u001b[43m)\u001b[49m\u001b[43m]\u001b[49m\u001b[43m)\u001b[49m\n",
+                        "File \u001b[0;32m~/.local/lib/python3.10/site-packages/torch/nn/parallel/parallel_apply.py:100\u001b[0m, in \u001b[0;36mparallel_apply\u001b[0;34m(modules, inputs, kwargs_tup, devices)\u001b[0m\n\u001b[1;32m     98\u001b[0m         thread\u001b[38;5;241m.\u001b[39mstart()\n\u001b[1;32m     99\u001b[0m     \u001b[38;5;28;01mfor\u001b[39;00m thread \u001b[38;5;129;01min\u001b[39;00m threads:\n\u001b[0;32m--> 100\u001b[0m         \u001b[43mthread\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43mjoin\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m    101\u001b[0m \u001b[38;5;28;01melse\u001b[39;00m:\n\u001b[1;32m    102\u001b[0m     _worker(\u001b[38;5;241m0\u001b[39m, modules[\u001b[38;5;241m0\u001b[39m], inputs[\u001b[38;5;241m0\u001b[39m], kwargs_tup[\u001b[38;5;241m0\u001b[39m], devices[\u001b[38;5;241m0\u001b[39m], streams[\u001b[38;5;241m0\u001b[39m])\n",
+                        "File \u001b[0;32m/usr/lib/python3.10/threading.py:1096\u001b[0m, in \u001b[0;36mThread.join\u001b[0;34m(self, timeout)\u001b[0m\n\u001b[1;32m   1093\u001b[0m     \u001b[38;5;28;01mraise\u001b[39;00m \u001b[38;5;167;01mRuntimeError\u001b[39;00m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mcannot join current thread\u001b[39m\u001b[38;5;124m\"\u001b[39m)\n\u001b[1;32m   1095\u001b[0m \u001b[38;5;28;01mif\u001b[39;00m timeout \u001b[38;5;129;01mis\u001b[39;00m \u001b[38;5;28;01mNone\u001b[39;00m:\n\u001b[0;32m-> 1096\u001b[0m     \u001b[38;5;28;43mself\u001b[39;49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43m_wait_for_tstate_lock\u001b[49m\u001b[43m(\u001b[49m\u001b[43m)\u001b[49m\n\u001b[1;32m   1097\u001b[0m \u001b[38;5;28;01melse\u001b[39;00m:\n\u001b[1;32m   1098\u001b[0m     \u001b[38;5;66;03m# the behavior of a negative timeout isn't documented, but\u001b[39;00m\n\u001b[1;32m   1099\u001b[0m     \u001b[38;5;66;03m# historically .join(timeout=x) for x<0 has acted as if timeout=0\u001b[39;00m\n\u001b[1;32m   1100\u001b[0m     \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_wait_for_tstate_lock(timeout\u001b[38;5;241m=\u001b[39m\u001b[38;5;28mmax\u001b[39m(timeout, \u001b[38;5;241m0\u001b[39m))\n",
+                        "File \u001b[0;32m/usr/lib/python3.10/threading.py:1116\u001b[0m, in \u001b[0;36mThread._wait_for_tstate_lock\u001b[0;34m(self, block, timeout)\u001b[0m\n\u001b[1;32m   1113\u001b[0m     \u001b[38;5;28;01mreturn\u001b[39;00m\n\u001b[1;32m   1115\u001b[0m \u001b[38;5;28;01mtry\u001b[39;00m:\n\u001b[0;32m-> 1116\u001b[0m     \u001b[38;5;28;01mif\u001b[39;00m \u001b[43mlock\u001b[49m\u001b[38;5;241;43m.\u001b[39;49m\u001b[43macquire\u001b[49m\u001b[43m(\u001b[49m\u001b[43mblock\u001b[49m\u001b[43m,\u001b[49m\u001b[43m \u001b[49m\u001b[43mtimeout\u001b[49m\u001b[43m)\u001b[49m:\n\u001b[1;32m   1117\u001b[0m         lock\u001b[38;5;241m.\u001b[39mrelease()\n\u001b[1;32m   1118\u001b[0m         \u001b[38;5;28mself\u001b[39m\u001b[38;5;241m.\u001b[39m_stop()\n",
+                        "\u001b[0;31mKeyboardInterrupt\u001b[0m: "
+                    ]
+                }
+            ],
+            "source": [
+                "from transformers import Seq2SeqTrainer\n",
+                "# Cell 8: Initialize Trainer\n",
+                "trainer = Seq2SeqTrainer(\n",
+                "    model=model,\n",
+                "    args=training_args,\n",
+                "    train_dataset=tokenized_datasets['train'],\n",
+                "    eval_dataset=tokenized_datasets['test'],\n",
+                "    tokenizer=tokenizer,\n",
+                "    compute_metrics=compute_metrics,\n",
+                ")\n",
+                "\n",
+                "# Cell 9: Fine-tune the model\n",
+                "trainer.train()\n",
+                "\n",
+                "# Cell 9: Save the fine-tuned model\n",
+                "model.save_pretrained('./improved_araT5')\n",
+                "tokenizer.save_pretrained('./improved_araT5')\n",
+                "\n",
+                "print(\"Model fine-tuned and saved successfully.\")"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "**Test Model**"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 3,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "\n",
+                "# Cell 2: Import necessary libraries\n",
+                "from transformers import T5Tokenizer, T5ForConditionalGeneration\n",
+                "\n",
+                "# Cell 3: Load the tokenizer and model from the specified checkpoint\n",
+                "checkpoint_path = 'model/checkpoint-5285'\n",
+                "tokenizer = T5Tokenizer.from_pretrained(checkpoint_path)\n",
+                "model = T5ForConditionalGeneration.from_pretrained(checkpoint_path)\n"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 20,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n"
+                    ]
+                },
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Generated SQL: SELECT courses FROM colleges WHERE name = 'العلوم)\n"
+                    ]
+                }
+            ],
+            "source": [
+                "def generate_sql(query, model, tokenizer):\n",
+                "    inputs = tokenizer(query, return_tensors=\"pt\")\n",
+                "    outputs = model.generate(**inputs)\n",
+                "    return tokenizer.decode(outputs[0], skip_special_tokens=True)\n",
+                "\n",
+                "# Example Arabic query\n",
+                "test_query = \"ما هي المساقات التي تطرحها كلية تكنولوجيا المعلومات؟\"\n",
+                "\n",
+                "# Generate and print the SQL query\n",
+                "generated_sql = generate_sql(test_query, model, tokenizer)\n",
+                "print(f\"Generated SQL: {generated_sql}\")"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "3.3 **Upload improved model to Hugging Face**"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 11,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Defaulting to user installation because normal site-packages is not writeable\n",
+                        "Requirement already satisfied: huggingface_hub in /home/ubuntu/.local/lib/python3.10/site-packages (0.23.3)\n",
+                        "Requirement already satisfied: filelock in /usr/local/lib/python3.10/dist-packages (from huggingface_hub) (3.14.0)\n",
+                        "Requirement already satisfied: fsspec>=2023.5.0 in /home/ubuntu/.local/lib/python3.10/site-packages (from huggingface_hub) (2024.5.0)\n",
+                        "Requirement already satisfied: packaging>=20.9 in /usr/local/lib/python3.10/dist-packages (from huggingface_hub) (21.3)\n",
+                        "Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.10/dist-packages (from huggingface_hub) (6.0.1)\n",
+                        "Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from huggingface_hub) (2.32.3)\n",
+                        "Requirement already satisfied: tqdm>=4.42.1 in /usr/local/lib/python3.10/dist-packages (from huggingface_hub) (4.66.4)\n",
+                        "Requirement already satisfied: typing-extensions>=3.7.4.3 in /usr/local/lib/python3.10/dist-packages (from huggingface_hub) (4.12.2)\n",
+                        "Requirement already satisfied: pyparsing!=3.0.5,>=2.0.2 in /usr/local/lib/python3.10/dist-packages (from packaging>=20.9->huggingface_hub) (3.1.2)\n",
+                        "Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests->huggingface_hub) (3.3.2)\n",
+                        "Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests->huggingface_hub) (3.7)\n",
+                        "Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests->huggingface_hub) (2.2.1)\n",
+                        "Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests->huggingface_hub) (2024.6.2)\n",
+                        "\u001b[33mDEPRECATION: devscripts 2.22.1ubuntu1 has a non-standard version number. pip 24.1 will enforce this behaviour change. A possible replacement is to upgrade to a newer version of devscripts or contact the author to suggest that they release a version with a conforming version number. Discussion can be found at https://github.com/pypa/pip/issues/12063\u001b[0m\u001b[33m\n",
+                        "\u001b[0m"
+                    ]
+                }
+            ],
+            "source": [
+                "!pip install huggingface_hub\n"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 12,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Reading package lists... Done\n",
+                        "Building dependency tree... Done\n",
+                        "Reading state information... Done\n",
+                        "git-lfs is already the newest version (3.0.2-1ubuntu0.2).\n",
+                        "0 upgraded, 0 newly installed, 0 to remove and 6 not upgraded.\n"
+                    ]
+                }
+            ],
+            "source": [
+                "# For Ubuntu\n",
+                "!sudo apt-get install git-lfs"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 13,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Git LFS initialized.\n"
+                    ]
+                }
+            ],
+            "source": [
+                "!git lfs install\n"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 20,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py:131: FutureWarning: 'Repository' (from 'huggingface_hub.repository') is deprecated and will be removed from version '1.0'. Please prefer the http-based alternatives instead. Given its large adoption in legacy code, the complete removal is only planned on next major release.\n",
+                        "For more details, please read https://huggingface.co/docs/huggingface_hub/concepts/git_vs_http.\n",
+                        "  warnings.warn(warning_message, FutureWarning)\n",
+                        "Cloning https://huggingface.co/abdullahsn/AAA-SQL-V2 into local empty directory.\n"
+                    ]
+                },
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "The token has not been saved to the git credentials helper. Pass `add_to_git_credential=True` in this function directly or `--add-to-git-credential` if using via `huggingface-cli` if you want to set the git credential as well.\n",
+                        "Token is valid (permission: write).\n",
+                        "Your token has been saved to /home/ubuntu/.cache/huggingface/token\n",
+                        "Login successful\n"
+                    ]
+                },
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "Upload file optimizer.pt:   0%|          | 1.00/2.11G [00:00<?, ?B/s]\n",
+                        "\u001b[A\n",
+                        "\n",
+                        "\u001b[A\u001b[A\n",
+                        "\n",
+                        "\n",
+                        "\u001b[A\u001b[A\u001b[A\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "\u001b[A\u001b[A\u001b[A\u001b[A\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file optimizer.pt:   1%|▏         | 30.5M/2.11G [00:01<01:10, 31.6MB/s]\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file optimizer.pt:   3%|▎         | 61.0M/2.11G [00:03<01:52, 19.5MB/s]\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file optimizer.pt:   4%|▍         | 91.6M/2.11G [00:04<01:28, 24.4MB/s]\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "\u001b[A\u001b[A\u001b[A\u001b[A\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file optimizer.pt:   6%|▌         | 122M/2.11G [00:05<01:18, 27.1MB/s] \n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file optimizer.pt:   7%|▋         | 153M/2.11G [00:06<01:13, 28.7MB/s]\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file optimizer.pt:   9%|▉         | 198M/2.11G [00:08<01:16, 26.9MB/s]\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file optimizer.pt:  11%|█▏        | 244M/2.11G [00:09<00:59, 33.5MB/s]\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "\u001b[A\u001b[A\u001b[A\u001b[A\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file optimizer.pt:  14%|█▍        | 305M/2.11G [00:11<01:02, 31.2MB/s]\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file optimizer.pt:  16%|█▋        | 351M/2.11G [00:12<00:52, 36.3MB/s]\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "\u001b[A\u001b[A\u001b[A\u001b[A\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file optimizer.pt:  21%|██        | 443M/2.11G [00:14<00:42, 42.2MB/s]\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "\u001b[A\u001b[A\u001b[A\u001b[A\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file optimizer.pt:  24%|██▍       | 519M/2.11G [00:16<00:41, 41.7MB/s]\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "\u001b[A\u001b[A\u001b[A\u001b[A\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file optimizer.pt:  27%|██▋       | 580M/2.11G [00:17<00:34, 48.4MB/s]\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file optimizer.pt:  29%|██▉       | 626M/2.11G [00:19<00:43, 36.6MB/s]\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "\u001b[A\u001b[A\u001b[A\u001b[A\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "\u001b[A\u001b[A\u001b[A\u001b[A\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "\u001b[A\u001b[A\u001b[A\u001b[A\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "\u001b[A\u001b[A\u001b[A\u001b[A\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "\u001b[A\u001b[A\u001b[A\u001b[A\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file optimizer.pt:  30%|██▉       | 641M/2.11G [00:24<01:55, 13.8MB/s]\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file optimizer.pt:  33%|███▎      | 717M/2.11G [00:26<01:06, 22.7MB/s]\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file optimizer.pt:  35%|███▌      | 763M/2.11G [00:27<00:52, 28.0MB/s]\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file optimizer.pt:  58%|█████▊    | 1.22G/2.11G [00:37<00:18, 50.7MB/s]\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file optimizer.pt: 100%|█████████▉| 2.10G/2.11G [00:57<00:00, 45.1MB/s]To https://huggingface.co/abdullahsn/AAA-SQL-V2\n",
+                        "   1a03fc4..9edfd5d  main -> main\n",
+                        "\n",
+                        "Upload file optimizer.pt: 100%|██████████| 2.11G/2.11G [00:58<00:00, 38.9MB/s]\n",
+                        "Upload file spiece.model: 100%|██████████| 2.32M/2.32M [00:58<00:00, 41.9kB/s]\n",
+                        "\n",
+                        "\u001b[A\n",
+                        "Upload file scheduler.pt: 100%|██████████| 1.04k/1.04k [00:58<00:00, 18.3B/s]\n",
+                        "\n",
+                        "\n",
+                        "\u001b[A\u001b[A\n",
+                        "\n",
+                        "Upload file training_args.bin: 100%|██████████| 5.12k/5.12k [00:58<00:00, 90.1B/s]\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "\u001b[A\u001b[A\u001b[A\n",
+                        "\n",
+                        "\n",
+                        "Upload file rng_state.pth: 100%|██████████| 13.9k/13.9k [00:58<00:00, 245B/s] \n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "\u001b[A\u001b[A\u001b[A\u001b[A\n",
+                        "\n",
+                        "\n",
+                        "\n",
+                        "Upload file model.safetensors: 100%|██████████| 1.05G/1.05G [00:58<00:00, 19.5MB/s]\n"
+                    ]
+                },
+                {
+                    "data": {
+                        "text/plain": [
+                            "'https://huggingface.co/abdullahsn/AAA-SQL-V2/commit/9edfd5d6dfd0883eff507b1de50aedd7f8ee066a'"
+                        ]
+                    },
+                    "execution_count": 20,
+                    "metadata": {},
+                    "output_type": "execute_result"
+                },
+                {
+                    "ename": "",
+                    "evalue": "",
+                    "output_type": "error",
+                    "traceback": [
+                        "\u001b[1;31mThe Kernel crashed while executing code in the current cell or a previous cell. \n",
+                        "\u001b[1;31mPlease review the code in the cell(s) to identify a possible cause of the failure. \n",
+                        "\u001b[1;31mClick <a href='https://aka.ms/vscodeJupyterKernelCrash'>here</a> for more info. \n",
+                        "\u001b[1;31mView Jupyter <a href='command:jupyter.viewOutput'>log</a> for further details."
+                    ]
+                }
+            ],
+            "source": [
+                "\n",
+                "# Cell 3: Import necessary libraries\n",
+                "import os\n",
+                "from huggingface_hub import Repository, login\n",
+                "\n",
+                "# Cell 4: Login to Hugging Face\n",
+                "# Replace 'your_huggingface_token' with your actual Hugging Face token\n",
+                "login(\"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\")\n",
+                "\n",
+                "# Cell 5: Define model information\n",
+                "model_name = \"AAA-SQL-V2\"  # Desired model name on Hugging Face\n",
+                "original_model_dir = \"/opt/dlami/nvme/AAA_V2/checkpoint-1386\"  # Directory where the model checkpoint is saved\n",
+                "new_model_dir = \"/opt/dlami/nvme/ttt2\"  # Temporary directory for cloning\n",
+                "\n",
+                "# Cell 6: Clone the existing repository to a new directory\n",
+                "repo_url = f\"abdullahsn/{model_name}\"  # Existing repository URL on Hugging Face\n",
+                "repo = Repository(local_dir=new_model_dir, clone_from=repo_url)\n",
+                "\n",
+                "# Cell 7: Move files from the original directory to the new cloned directory\n",
+                "os.system(f\"cp -r {original_model_dir}/* {new_model_dir}\")\n",
+                "\n",
+                "# Cell 8: Add all files and push to the Hugging Face Hub\n",
+                "repo.git_add()\n",
+                "repo.git_commit(\"Initial commit of fine-tuned model\")\n",
+                "repo.git_push()\n",
+                "\n",
+                "\n"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "4. **Tuning the Improved Model on Spider Dataset**"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "4.1 **Load and prepare Dataset**"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 34,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Datasets saved successfully.\n"
+                    ]
+                }
+            ],
+            "source": [
+                "import json\n",
+                "import random\n",
+                "from sklearn.model_selection import train_test_split\n",
+                "\n",
+                "# Load the Spider dataset\n",
+                "with open('Datasets/spider_translated.json', 'r', encoding='utf-8') as f:\n",
+                "    spider_data = json.load(f)\n",
+                "\n",
+                "# Flatten the data to treat each translation as a separate sample\n",
+                "flattened_data = []\n",
+                "for item in spider_data:\n",
+                "    english_query = item['English_NL']\n",
+                "    sql_query = item['SQL']\n",
+                "    for arabic_translation in item['Arabic_NL']:\n",
+                "        flattened_data.append({\n",
+                "            'input': arabic_translation,\n",
+                "            'output': sql_query\n",
+                "        })\n",
+                "\n",
+                "# Shuffle the data\n",
+                "random.shuffle(flattened_data)\n",
+                "\n",
+                "# Split the data into training (80%) and testing (20%) sets\n",
+                "train_data, test_data = train_test_split(flattened_data, test_size=0.2, random_state=42)\n",
+                "\n",
+                "# Save the datasets\n",
+                "output_dir = 'Datasets/spider'\n",
+                "os.makedirs(output_dir, exist_ok=True)\n",
+                "\n",
+                "with open(f'{output_dir}/train.json', 'w', encoding='utf-8') as f:\n",
+                "    json.dump(train_data, f, ensure_ascii=False, indent=4)\n",
+                "\n",
+                "with open(f'{output_dir}/test.json', 'w', encoding='utf-8') as f:\n",
+                "    json.dump(test_data, f, ensure_ascii=False, indent=4)\n",
+                "\n",
+                "print(\"Datasets saved successfully.\")"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "4.2 **Tuning Process**"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 8,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "import json\n",
+                "import random\n",
+                "from sklearn.model_selection import train_test_split\n",
+                "from transformers import T5Tokenizer, T5ForConditionalGeneration, Trainer, TrainingArguments\n",
+                "from datasets import load_metric\n",
+                "\n",
+                "model_name = 'abdullahsn/AraT5-ImprovedTranslatedWikiSQL'\n",
+                "tokenizer = T5Tokenizer.from_pretrained(model_name)\n",
+                "model = T5ForConditionalGeneration.from_pretrained(model_name)"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 9,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n"
+                    ]
+                },
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Generated SQL: SELECT Location FROM table WHERE City = indiana\n"
+                    ]
+                }
+            ],
+            "source": [
+                "# Simple Test to verify we load the model correctly\n",
+                "def generate_sql(query, model, tokenizer):\n",
+                "    inputs = tokenizer(query, return_tensors=\"pt\")\n",
+                "    outputs = model.generate(**inputs)\n",
+                "    return tokenizer.decode(outputs[0], skip_special_tokens=True)\n",
+                "\n",
+                "# Example Arabic query\n",
+                "test_query = \"أين تقع مدينة بيروت؟\"\n",
+                "\n",
+                "\n",
+                "# Generate and print the SQL query\n",
+                "generated_sql = generate_sql(test_query, model, tokenizer)\n",
+                "print(f\"Generated SQL: {generated_sql}\")"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 43,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "import json\n",
+                "from transformers import T5Tokenizer, T5ForConditionalGeneration, Trainer, TrainingArguments\n",
+                "from datasets import load_dataset, Dataset"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 44,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "\n",
+                "with open('Datasets/spider/train.json', 'r', encoding='utf-8') as f:\n",
+                "    train_data = json.load(f)\n",
+                "\n",
+                "with open('Datasets/spider/test.json', 'r', encoding='utf-8') as f:\n",
+                "    test_data = json.load(f)\n",
+                "\n",
+                "\n",
+                "\n",
+                "# Convert the combined data to HuggingFace dataset format\n",
+                "train_dataset = Dataset.from_dict({\n",
+                "    'input': [item['input'] for item in train_data],\n",
+                "    'output': [item['output'] for item in train_data]\n",
+                "})\n",
+                "\n",
+                "test_datset = Dataset.from_dict({\n",
+                "    'input': [item['input'] for item in test_data],\n",
+                "    'output': [item['output'] for item in test_data]\n",
+                "})\n",
+                "\n"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 46,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "Map:   0%|          | 0/16800 [00:00<?, ? examples/s]"
+                    ]
+                },
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3946: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.\n",
+                        "  warnings.warn(\n",
+                        "Map: 100%|██████████| 16800/16800 [00:05<00:00, 2819.80 examples/s]\n",
+                        "Map: 100%|██████████| 4200/4200 [00:01<00:00, 2844.69 examples/s]\n"
+                    ]
+                }
+            ],
+            "source": [
+                "# Cell 5: Preprocess the data\n",
+                "def preprocess_function(examples):\n",
+                "    inputs = [example for example in examples['input']]\n",
+                "    targets = [example for example in examples['output']]\n",
+                "    model_inputs = tokenizer(inputs, max_length=512, padding='max_length', truncation=True)\n",
+                "\n",
+                "    # Set up the tokenizer for targets\n",
+                "    with tokenizer.as_target_tokenizer():\n",
+                "        labels = tokenizer(targets, max_length=512, padding='max_length', truncation=True)\n",
+                "\n",
+                "    model_inputs[\"labels\"] = labels[\"input_ids\"]\n",
+                "    return model_inputs\n",
+                "\n",
+                "tokenized_train_dataset = train_dataset.map(preprocess_function, batched=True)\n",
+                "tokenized_test_dataset = test_datset.map(preprocess_function, batched=True)"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 47,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/tmp/ipykernel_54330/4100879693.py:1: FutureWarning: load_metric is deprecated and will be removed in the next major version of datasets. Use 'evaluate.load' instead, from the new library 🤗 Evaluate: https://huggingface.co/docs/evaluate\n",
+                        "  metric = load_metric(\"sacrebleu\")\n"
+                    ]
+                }
+            ],
+            "source": [
+                "\n",
+                "metric = load_metric(\"sacrebleu\")\n",
+                "\n",
+                "def compute_metrics(eval_preds):\n",
+                "    preds, labels = eval_preds\n",
+                "    decoded_preds = tokenizer.batch_decode(preds, skip_special_tokens=True)\n",
+                "    decoded_labels = tokenizer.batch_decode(labels, skip_special_tokens=True)\n",
+                "    \n",
+                "    # Replace -100 in the labels as we can't decode them\n",
+                "    decoded_labels = [[label] for label in decoded_labels]\n",
+                "    \n",
+                "    result = metric.compute(predictions=decoded_preds, references=decoded_labels)\n",
+                "    result = {\"bleu\": result[\"score\"]}\n",
+                "    return result"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "**HERE WAS THE TRAINING OF THE MODEL (LOST DUE TO GITHUB COMMIT)**"
+            ]
+        },
+        {
+            "attachments": {
+                "image.png": {
+                    "image/png": "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"
+                }
+            },
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "![image.png](attachment:image.png)"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "4.2.1 **Load Last Checkpoint of Training on Spider dataset**"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 18,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "# Cell 2: Import necessary libraries\n",
+                "from transformers import T5Tokenizer, T5ForConditionalGeneration\n",
+                "\n",
+                "# Cell 3: Load the tokenizer and model from the specified checkpoint\n",
+                "model_path = 'abdullahsn/AraT5-SpiderDataset'\n",
+                "tok = T5Tokenizer.from_pretrained(model_path)\n",
+                "mod = T5ForConditionalGeneration.from_pretrained(model_path)"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 19,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n"
+                    ]
+                },
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Generated SQL: SELECT DISTINCT T1.dept_code FROM college AS T\n"
+                    ]
+                }
+            ],
+            "source": [
+                "def generate_sql(query, model, tokenizer):\n",
+                "    inputs = tokenizer(query, return_tensors=\"pt\")\n",
+                "    outputs = model.generate(**inputs)\n",
+                "    return tokenizer.decode(outputs[0], skip_special_tokens=True)\n",
+                "\n",
+                "# Example Arabic query\n",
+                "test_query = \"شو رمز كلية الهندسة؟\"\n",
+                "\n",
+                "# Generate and print the SQL query\n",
+                "generated_sql = generate_sql(test_query, mod, tok)\n",
+                "print(f\"Generated SQL: {generated_sql}\")"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 45,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "import json\n",
+                "import random\n",
+                "from sklearn.model_selection import train_test_split\n",
+                "from transformers import T5Tokenizer, T5ForConditionalGeneration, Trainer, TrainingArguments\n",
+                "from datasets import load_metric\n",
+                "\n",
+                "model_name = 'obada-jaras/PANL_SQL'\n",
+                "tokenizer = T5Tokenizer.from_pretrained(model_name)\n",
+                "model = T5ForConditionalGeneration.from_pretrained(model_name)"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 50,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n"
+                    ]
+                },
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Generated SQL: SELECT description FROM faculty WHERE name_arabic = 'الهندسة والتكنولوجيا'\n"
+                    ]
+                }
+            ],
+            "source": [
+                "def generate_sql(query, model, tokenizer):\n",
+                "    inputs = tokenizer(query, return_tensors=\"pt\")\n",
+                "    outputs = model.generate(**inputs)\n",
+                "    return tokenizer.decode(outputs[0], skip_special_tokens=True)\n",
+                "\n",
+                "# Example Arabic query\n",
+                "test_query = \"هات وصف الكلية\"\n",
+                "\n",
+                "# Generate and print the SQL query\n",
+                "generated_sql = generate_sql(test_query, model, tokenizer)\n",
+                "print(f\"Generated SQL: {generated_sql}\")"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "5. **Tuning the ImprovedWiki Model on BZU Dataset**"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "5.1 Load Data and prepare it for training and testing"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 1,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Training data saved to Datasets/bzu/bzu_train.json\n",
+                        "Testing data saved to Datasets/bzu/bzu_test.json\n"
+                    ]
+                }
+            ],
+            "source": [
+                "import json\n",
+                "import random\n",
+                "\n",
+                "# Paths to the preprocessed datasets\n",
+                "datasets_paths = [\n",
+                "    'BZU_Data/prep_course.json',\n",
+                "    'BZU_Data/prep_department.json',\n",
+                "    'BZU_Data/prep_faculty.json',\n",
+                "    'BZU_Data/prep_instructor.json'\n",
+                "]\n",
+                "\n",
+                "# Load all datasets and combine them\n",
+                "combined_data = []\n",
+                "for path in datasets_paths:\n",
+                "    with open(path, 'r', encoding='utf-8') as file:\n",
+                "        dataset = json.load(file)\n",
+                "        combined_data.extend(dataset)\n",
+                "\n",
+                "# Shuffle the combined dataset\n",
+                "random.shuffle(combined_data)\n",
+                "\n",
+                "# Split into training (80%) and testing (20%) sets\n",
+                "split_index = int(0.8 * len(combined_data))\n",
+                "train_data = combined_data[:split_index]\n",
+                "test_data = combined_data[split_index:]\n",
+                "\n",
+                "# Save the split datasets to JSON files\n",
+                "train_output_path = 'Datasets/bzu/bzu_train.json'\n",
+                "test_output_path = 'Datasets/bzu/bzu_test.json'\n",
+                "\n",
+                "with open(train_output_path, 'w', encoding='utf-8') as train_file:\n",
+                "    json.dump(train_data, train_file, ensure_ascii=False, indent=4)\n",
+                "\n",
+                "with open(test_output_path, 'w', encoding='utf-8') as test_file:\n",
+                "    json.dump(test_data, test_file, ensure_ascii=False, indent=4)\n",
+                "\n",
+                "print(f\"Training data saved to {train_output_path}\")\n",
+                "print(f\"Testing data saved to {test_output_path}\")\n"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "5.2 **Load the model and tokenizer of the model**"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 57,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "import json\n",
+                "import random\n",
+                "from sklearn.model_selection import train_test_split\n",
+                "from transformers import T5Tokenizer, T5ForConditionalGeneration, Trainer, TrainingArguments\n",
+                "from datasets import load_metric\n",
+                "\n",
+                "model_name = 'abdullahsn/AraT5-ImprovedTranslatedWikiSQL'\n",
+                "tokenizer = T5Tokenizer.from_pretrained(model_name)\n",
+                "model = T5ForConditionalGeneration.from_pretrained(model_name)"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 59,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Done\n"
+                    ]
+                }
+            ],
+            "source": [
+                "import json\n",
+                "from transformers import T5Tokenizer, T5ForConditionalGeneration, Trainer, TrainingArguments\n",
+                "from datasets import load_dataset, Dataset\n",
+                "\n",
+                "\n",
+                "with open('Datasets/bzu/bzu_train.json', 'r', encoding='utf-8') as f:\n",
+                "    train_data = json.load(f)\n",
+                "\n",
+                "with open('Datasets/bzu/bzu_test.json', 'r', encoding='utf-8') as f:\n",
+                "    test_data = json.load(f)\n",
+                "\n",
+                "\n",
+                "\n",
+                "# Convert the combined data to HuggingFace dataset format\n",
+                "train_dataset = Dataset.from_dict({\n",
+                "    'input': [item['input'] for item in train_data],\n",
+                "    'output': [item['output'] for item in train_data]\n",
+                "})\n",
+                "\n",
+                "test_datset = Dataset.from_dict({\n",
+                "    'input': [item['input'] for item in test_data],\n",
+                "    'output': [item['output'] for item in test_data]\n",
+                "})\n",
+                "\n",
+                "print('Done')\n"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 60,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "Map:   0%|          | 0/5291 [00:00<?, ? examples/s]/home/ubuntu/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3946: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.\n",
+                        "  warnings.warn(\n",
+                        "Map: 100%|██████████| 5291/5291 [00:01<00:00, 2752.76 examples/s]\n",
+                        "Map: 100%|██████████| 1323/1323 [00:00<00:00, 2734.00 examples/s]\n"
+                    ]
+                }
+            ],
+            "source": [
+                "# Cell 5: Preprocess the data\n",
+                "def preprocess_function(examples):\n",
+                "    inputs = [example for example in examples['input']]\n",
+                "    targets = [example for example in examples['output']]\n",
+                "    model_inputs = tokenizer(inputs, max_length=512, padding='max_length', truncation=True)\n",
+                "\n",
+                "    # Set up the tokenizer for targets\n",
+                "    with tokenizer.as_target_tokenizer():\n",
+                "        labels = tokenizer(targets, max_length=512, padding='max_length', truncation=True)\n",
+                "\n",
+                "    model_inputs[\"labels\"] = labels[\"input_ids\"]\n",
+                "    return model_inputs\n",
+                "\n",
+                "tokenized_train_dataset = train_dataset.map(preprocess_function, batched=True)\n",
+                "tokenized_test_dataset = test_datset.map(preprocess_function, batched=True)"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 61,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "\n",
+                "metric = load_metric(\"sacrebleu\")\n",
+                "\n",
+                "def compute_metrics(eval_preds):\n",
+                "    preds, labels = eval_preds\n",
+                "    decoded_preds = tokenizer.batch_decode(preds, skip_special_tokens=True)\n",
+                "    decoded_labels = tokenizer.batch_decode(labels, skip_special_tokens=True)\n",
+                "    \n",
+                "    # Replace -100 in the labels as we can't decode them\n",
+                "    decoded_labels = [[label] for label in decoded_labels]\n",
+                "    \n",
+                "    result = metric.compute(predictions=decoded_preds, references=decoded_labels)\n",
+                "    result = {\"bleu\": result[\"score\"]}\n",
+                "    return result"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 62,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "import json\n",
+                "from transformers import T5Tokenizer, T5ForConditionalGeneration, Seq2SeqTrainingArguments, Seq2SeqTrainer\n",
+                "from datasets import load_dataset, Dataset, load_metric"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 74,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/training_args.py:1474: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead\n",
+                        "  warnings.warn(\n"
+                    ]
+                }
+            ],
+            "source": [
+                "\n",
+                "# Cell 7: Set up training arguments\n",
+                "training_args = Seq2SeqTrainingArguments(\n",
+                "    output_dir='/opt/dlami/nvme/AAA',               # output directory\n",
+                "    overwrite_output_dir=True,          # overwrite the content of the output directory\n",
+                "    learning_rate=8e-4,                 # learning rate\n",
+                "    per_device_train_batch_size=4,      # batch size for training\n",
+                "    per_device_eval_batch_size=4,       # batch size for evaluation\n",
+                "    num_train_epochs=7,                 # total number of training epochs\n",
+                "    evaluation_strategy=\"epoch\",        # evaluate every epoch\n",
+                "    save_strategy=\"epoch\",              # save checkpoint every epoch\n",
+                "    save_total_limit=3,                 # limit to 3 checkpoints\n",
+                "    load_best_model_at_end=True,        # load the best model at the end of training\n",
+                "    metric_for_best_model=\"bleu\",       # metric to use for model selection\n",
+                "    greater_is_better=True,             # the higher the metric the better\n",
+                "    predict_with_generate=True,         # use generate to calculate metrics\n",
+                "    logging_dir='/opt/dlami/nvme/logs',               # directory for storing logs\n",
+                "    logging_strategy=\"epoch\",           # log every epoch\n",
+                ")"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 75,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "There were missing keys in the checkpoint model loaded: ['encoder.embed_tokens.weight', 'decoder.embed_tokens.weight', 'lm_head.weight'].\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n",
+                        "  warnings.warn('Was asked to gather along dimension 0, but all '\n"
+                    ]
+                },
+                {
+                    "data": {
+                        "text/html": [
+                            "\n",
+                            "    <div>\n",
+                            "      \n",
+                            "      <progress value='2317' max='2317' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
+                            "      [2317/2317 54:27, Epoch 7/7]\n",
+                            "    </div>\n",
+                            "    <table border=\"1\" class=\"dataframe\">\n",
+                            "  <thead>\n",
+                            " <tr style=\"text-align: left;\">\n",
+                            "      <th>Epoch</th>\n",
+                            "      <th>Training Loss</th>\n",
+                            "      <th>Validation Loss</th>\n",
+                            "      <th>Bleu</th>\n",
+                            "    </tr>\n",
+                            "  </thead>\n",
+                            "  <tbody>\n",
+                            "    <tr>\n",
+                            "      <td>3</td>\n",
+                            "      <td>0.002700</td>\n",
+                            "      <td>0.001648</td>\n",
+                            "      <td>8.040733</td>\n",
+                            "    </tr>\n",
+                            "    <tr>\n",
+                            "      <td>4</td>\n",
+                            "      <td>0.001600</td>\n",
+                            "      <td>0.000678</td>\n",
+                            "      <td>8.046469</td>\n",
+                            "    </tr>\n",
+                            "    <tr>\n",
+                            "      <td>5</td>\n",
+                            "      <td>0.001000</td>\n",
+                            "      <td>0.000462</td>\n",
+                            "      <td>8.065671</td>\n",
+                            "    </tr>\n",
+                            "    <tr>\n",
+                            "      <td>6</td>\n",
+                            "      <td>0.000700</td>\n",
+                            "      <td>0.000353</td>\n",
+                            "      <td>8.105907</td>\n",
+                            "    </tr>\n",
+                            "    <tr>\n",
+                            "      <td>7</td>\n",
+                            "      <td>0.000500</td>\n",
+                            "      <td>0.000319</td>\n",
+                            "      <td>8.093828</td>\n",
+                            "    </tr>\n",
+                            "  </tbody>\n",
+                            "</table><p>"
+                        ],
+                        "text/plain": [
+                            "<IPython.core.display.HTML object>"
+                        ]
+                    },
+                    "metadata": {},
+                    "output_type": "display_data"
+                },
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n",
+                        "  warnings.warn('Was asked to gather along dimension 0, but all '\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n",
+                        "  warnings.warn('Was asked to gather along dimension 0, but all '\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n",
+                        "  warnings.warn('Was asked to gather along dimension 0, but all '\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n",
+                        "  warnings.warn('Was asked to gather along dimension 0, but all '\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n",
+                        "There were missing keys in the checkpoint model loaded: ['encoder.embed_tokens.weight', 'decoder.embed_tokens.weight', 'lm_head.weight'].\n"
+                    ]
+                },
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Model fine-tuned and saved successfully.\n"
+                    ]
+                }
+            ],
+            "source": [
+                "from transformers import Seq2SeqTrainer\n",
+                "# Cell 8: Initialize Trainer\n",
+                "trainer = Seq2SeqTrainer(\n",
+                "    model=model,\n",
+                "    args=training_args,\n",
+                "    train_dataset=tokenized_train_dataset,\n",
+                "    eval_dataset=tokenized_test_dataset,\n",
+                "    tokenizer=tokenizer,\n",
+                "    compute_metrics=compute_metrics,\n",
+                ")\n",
+                "\n",
+                "checkpoint = 'AAA/checkpoint-662'\n",
+                "\n",
+                "# Cell 9: Fine-tune the model\n",
+                "trainer.train(resume_from_checkpoint=checkpoint)\n",
+                "\n",
+                "# Cell 9: Save the fine-tuned model\n",
+                "model.save_pretrained('/opt/dlami/nvme/AAA_SQL')\n",
+                "tokenizer.save_pretrained('/opt/dlami/nvme/AAA_SQL')\n",
+                "\n",
+                "print(\"Model fine-tuned and saved successfully.\")"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 85,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "import json\n",
+                "import random\n",
+                "from sklearn.model_selection import train_test_split\n",
+                "from transformers import T5Tokenizer, T5ForConditionalGeneration, Trainer, TrainingArguments\n",
+                "from datasets import load_metric\n",
+                "\n",
+                "model_name_1 = '/opt/dlami/nvme/AAA/checkpoint-1986'\n",
+                "test_tokenizer = T5Tokenizer.from_pretrained(model_name_1)\n",
+                "test_model = T5ForConditionalGeneration.from_pretrained(model_name_1)"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 93,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n"
+                    ]
+                },
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Generated SQL: SELECT i.name_arabic FROM department d JOIN instructor\n"
+                    ]
+                }
+            ],
+            "source": [
+                "def generate_sql(query, model, tokenizer):\n",
+                "    inputs = tokenizer(query, return_tensors=\"pt\")\n",
+                "    outputs = model.generate(**inputs)\n",
+                "    return tokenizer.decode(outputs[0], skip_special_tokens=True)\n",
+                "\n",
+                "# Example Arabic query\n",
+                "test_query = \"مين رئيس دائرة الهندسة؟\"\n",
+                "# Generate and print the SQL query\n",
+                "generated_sql = generate_sql(test_query,test_model, test_tokenizer)\n",
+                "print(f\"Generated SQL: {generated_sql}\")"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "**UPLOADING AAA Model to Hugging Face**"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "6. **Tuning AAA Model on more-specific dataset**"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "6.1 **Load model**"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 1,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/usr/local/lib/python3.10/dist-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html\n",
+                        "  from .autonotebook import tqdm as notebook_tqdm\n",
+                        "2024-06-20 05:51:23.785259: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.\n",
+                        "To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.\n",
+                        "2024-06-20 05:51:24.502250: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT\n"
+                    ]
+                }
+            ],
+            "source": [
+                "import json\n",
+                "import random\n",
+                "from sklearn.model_selection import train_test_split\n",
+                "from transformers import T5Tokenizer, T5ForConditionalGeneration, Trainer, TrainingArguments\n",
+                "from datasets import load_metric\n",
+                "\n",
+                "model_name = 'abdullahsn/AAA-SQL'\n",
+                "tokenizer = T5Tokenizer.from_pretrained(model_name)\n",
+                "model = T5ForConditionalGeneration.from_pretrained(model_name)"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 2,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n"
+                    ]
+                },
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Generated SQL: SELECT i.name_arabic FROM department d JOIN instructor\n"
+                    ]
+                }
+            ],
+            "source": [
+                "def generate_sql(query, model, tokenizer):\n",
+                "    inputs = tokenizer(query, return_tensors=\"pt\")\n",
+                "    outputs = model.generate(**inputs)\n",
+                "    return tokenizer.decode(outputs[0], skip_special_tokens=True)\n",
+                "\n",
+                "# Example Arabic query\n",
+                "test_query = \"مين رئيس دائرة الهندسة؟\"\n",
+                "# Generate and print the SQL query\n",
+                "generated_sql = generate_sql(test_query,model, tokenizer)\n",
+                "print(f\"Generated SQL: {generated_sql}\")"
+            ]
+        },
+        {
+            "cell_type": "markdown",
+            "metadata": {},
+            "source": [
+                "6.2 **Start Tuning**"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 3,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Done\n"
+                    ]
+                }
+            ],
+            "source": [
+                "import json\n",
+                "from transformers import T5Tokenizer, T5ForConditionalGeneration, Trainer, TrainingArguments\n",
+                "from datasets import load_dataset, Dataset\n",
+                "\n",
+                "\n",
+                "with open('Datasets/bzu_spec/spec_train.json', 'r', encoding='utf-8') as f:\n",
+                "    train_data = json.load(f)\n",
+                "\n",
+                "with open('Datasets/bzu_spec/spec_test.json', 'r', encoding='utf-8') as f:\n",
+                "    test_data = json.load(f)\n",
+                "\n",
+                "\n",
+                "\n",
+                "# Convert the combined data to HuggingFace dataset format\n",
+                "train_dataset = Dataset.from_dict({\n",
+                "    'input': [item['input'] for item in train_data],\n",
+                "    'output': [item['output'] for item in train_data]\n",
+                "})\n",
+                "\n",
+                "test_datset = Dataset.from_dict({\n",
+                "    'input': [item['input'] for item in test_data],\n",
+                "    'output': [item['output'] for item in test_data]\n",
+                "})\n",
+                "\n",
+                "print('Done')"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 4,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "Map:   0%|          | 0/3153 [00:00<?, ? examples/s]"
+                    ]
+                },
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/tokenization_utils_base.py:3946: UserWarning: `as_target_tokenizer` is deprecated and will be removed in v5 of Transformers. You can tokenize your labels by using the argument `text_target` of the regular `__call__` method (either in the same call as your input texts if you use the same keyword arguments, or in a separate call.\n",
+                        "  warnings.warn(\n",
+                        "Map: 100%|██████████| 3153/3153 [00:01<00:00, 2621.97 examples/s]\n",
+                        "Map: 100%|██████████| 789/789 [00:00<00:00, 2635.16 examples/s]\n"
+                    ]
+                }
+            ],
+            "source": [
+                "# Cell 5: Preprocess the data\n",
+                "def preprocess_function(examples):\n",
+                "    inputs = [example for example in examples['input']]\n",
+                "    targets = [example for example in examples['output']]\n",
+                "    model_inputs = tokenizer(inputs, max_length=512, padding='max_length', truncation=True)\n",
+                "\n",
+                "    # Set up the tokenizer for targets\n",
+                "    with tokenizer.as_target_tokenizer():\n",
+                "        labels = tokenizer(targets, max_length=512, padding='max_length', truncation=True)\n",
+                "\n",
+                "    model_inputs[\"labels\"] = labels[\"input_ids\"]\n",
+                "    return model_inputs\n",
+                "\n",
+                "tokenized_train_dataset = train_dataset.map(preprocess_function, batched=True)\n",
+                "tokenized_test_dataset = test_datset.map(preprocess_function, batched=True)"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 5,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/tmp/ipykernel_32075/4100879693.py:1: FutureWarning: load_metric is deprecated and will be removed in the next major version of datasets. Use 'evaluate.load' instead, from the new library 🤗 Evaluate: https://huggingface.co/docs/evaluate\n",
+                        "  metric = load_metric(\"sacrebleu\")\n"
+                    ]
+                }
+            ],
+            "source": [
+                "\n",
+                "metric = load_metric(\"sacrebleu\")\n",
+                "\n",
+                "def compute_metrics(eval_preds):\n",
+                "    preds, labels = eval_preds\n",
+                "    decoded_preds = tokenizer.batch_decode(preds, skip_special_tokens=True)\n",
+                "    decoded_labels = tokenizer.batch_decode(labels, skip_special_tokens=True)\n",
+                "    \n",
+                "    # Replace -100 in the labels as we can't decode them\n",
+                "    decoded_labels = [[label] for label in decoded_labels]\n",
+                "    \n",
+                "    result = metric.compute(predictions=decoded_preds, references=decoded_labels)\n",
+                "    result = {\"bleu\": result[\"score\"]}\n",
+                "    return result"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 6,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "import json\n",
+                "from transformers import T5Tokenizer, T5ForConditionalGeneration, Seq2SeqTrainingArguments, Seq2SeqTrainer\n",
+                "from datasets import load_dataset, Dataset, load_metric"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 7,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/training_args.py:1474: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead\n",
+                        "  warnings.warn(\n"
+                    ]
+                }
+            ],
+            "source": [
+                "# Cell 7: Set up training arguments\n",
+                "training_args = Seq2SeqTrainingArguments(\n",
+                "    output_dir='/opt/dlami/nvme/AAA_V2',               # output directory\n",
+                "    overwrite_output_dir=True,          # overwrite the content of the output directory\n",
+                "    learning_rate=9e-4,                 # learning rate\n",
+                "    per_device_train_batch_size=4,      # batch size for training\n",
+                "    per_device_eval_batch_size=4,       # batch size for evaluation\n",
+                "    num_train_epochs=7,                 # total number of training epochs\n",
+                "    evaluation_strategy=\"epoch\",        # evaluate every epoch\n",
+                "    save_strategy=\"epoch\",              # save checkpoint every epoch\n",
+                "    save_total_limit=3,                 # limit to 3 checkpoints\n",
+                "    load_best_model_at_end=True,        # load the best model at the end of training\n",
+                "    metric_for_best_model=\"bleu\",       # metric to use for model selection\n",
+                "    greater_is_better=True,             # the higher the metric the better\n",
+                "    predict_with_generate=True,         # use generate to calculate metrics\n",
+                "    logging_dir='/opt/dlami/nvme/logs_V2',               # directory for storing logs\n",
+                "    logging_strategy=\"epoch\",           # log every epoch\n",
+                ")"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 8,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "[2024-06-20 05:52:01,921] [INFO] [real_accelerator.py:203:get_accelerator] Setting ds_accelerator to cuda (auto detect)\n",
+                        "\u001b[93m [WARNING] \u001b[0m async_io requires the dev libaio .so object and headers but these were not found.\n",
+                        "\u001b[93m [WARNING] \u001b[0m async_io: please install the libaio-dev package with apt\n",
+                        "\u001b[93m [WARNING] \u001b[0m If libaio is already installed (perhaps from source), try setting the CFLAGS and LDFLAGS environment variables to where it can be found.\n",
+                        "\u001b[93m [WARNING] \u001b[0m Please specify the CUTLASS repo directory as environment variable $CUTLASS_PATH\n"
+                    ]
+                },
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/bin/ld: cannot find -laio: No such file or directory\n",
+                        "collect2: error: ld returned 1 exit status\n"
+                    ]
+                },
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "\u001b[93m [WARNING] \u001b[0m sparse_attn requires a torch version >= 1.5 and < 2.0 but detected 2.3\n",
+                        "\u001b[93m [WARNING] \u001b[0m using untested triton version (2.3.1), only 1.0.0 is known to be compatible\n"
+                    ]
+                },
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n",
+                        "  warnings.warn('Was asked to gather along dimension 0, but all '\n"
+                    ]
+                },
+                {
+                    "data": {
+                        "text/html": [
+                            "\n",
+                            "    <div>\n",
+                            "      \n",
+                            "      <progress value='1386' max='1386' style='width:300px; height:20px; vertical-align: middle;'></progress>\n",
+                            "      [1386/1386 45:41, Epoch 7/7]\n",
+                            "    </div>\n",
+                            "    <table border=\"1\" class=\"dataframe\">\n",
+                            "  <thead>\n",
+                            " <tr style=\"text-align: left;\">\n",
+                            "      <th>Epoch</th>\n",
+                            "      <th>Training Loss</th>\n",
+                            "      <th>Validation Loss</th>\n",
+                            "      <th>Bleu</th>\n",
+                            "    </tr>\n",
+                            "  </thead>\n",
+                            "  <tbody>\n",
+                            "    <tr>\n",
+                            "      <td>1</td>\n",
+                            "      <td>0.035800</td>\n",
+                            "      <td>0.003753</td>\n",
+                            "      <td>6.260607</td>\n",
+                            "    </tr>\n",
+                            "    <tr>\n",
+                            "      <td>2</td>\n",
+                            "      <td>0.005200</td>\n",
+                            "      <td>0.001781</td>\n",
+                            "      <td>6.308825</td>\n",
+                            "    </tr>\n",
+                            "    <tr>\n",
+                            "      <td>3</td>\n",
+                            "      <td>0.002500</td>\n",
+                            "      <td>0.001198</td>\n",
+                            "      <td>6.368129</td>\n",
+                            "    </tr>\n",
+                            "    <tr>\n",
+                            "      <td>4</td>\n",
+                            "      <td>0.001500</td>\n",
+                            "      <td>0.001098</td>\n",
+                            "      <td>6.385440</td>\n",
+                            "    </tr>\n",
+                            "    <tr>\n",
+                            "      <td>5</td>\n",
+                            "      <td>0.000800</td>\n",
+                            "      <td>0.001017</td>\n",
+                            "      <td>6.415790</td>\n",
+                            "    </tr>\n",
+                            "    <tr>\n",
+                            "      <td>6</td>\n",
+                            "      <td>0.000600</td>\n",
+                            "      <td>0.000978</td>\n",
+                            "      <td>6.392993</td>\n",
+                            "    </tr>\n",
+                            "    <tr>\n",
+                            "      <td>7</td>\n",
+                            "      <td>0.000400</td>\n",
+                            "      <td>0.000963</td>\n",
+                            "      <td>6.419299</td>\n",
+                            "    </tr>\n",
+                            "  </tbody>\n",
+                            "</table><p>"
+                        ],
+                        "text/plain": [
+                            "<IPython.core.display.HTML object>"
+                        ]
+                    },
+                    "metadata": {},
+                    "output_type": "display_data"
+                },
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n",
+                        "  warnings.warn('Was asked to gather along dimension 0, but all '\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n",
+                        "  warnings.warn('Was asked to gather along dimension 0, but all '\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n",
+                        "  warnings.warn('Was asked to gather along dimension 0, but all '\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n",
+                        "  warnings.warn('Was asked to gather along dimension 0, but all '\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n",
+                        "  warnings.warn('Was asked to gather along dimension 0, but all '\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.\n",
+                        "  warnings.warn('Was asked to gather along dimension 0, but all '\n",
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n",
+                        "There were missing keys in the checkpoint model loaded: ['encoder.embed_tokens.weight', 'decoder.embed_tokens.weight', 'lm_head.weight'].\n"
+                    ]
+                },
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Model fine-tuned and saved successfully.\n"
+                    ]
+                }
+            ],
+            "source": [
+                "from transformers import Seq2SeqTrainer\n",
+                "# Cell 8: Initialize Trainer\n",
+                "trainer = Seq2SeqTrainer(\n",
+                "    model=model,\n",
+                "    args=training_args,\n",
+                "    train_dataset=tokenized_train_dataset,\n",
+                "    eval_dataset=tokenized_test_dataset,\n",
+                "    tokenizer=tokenizer,\n",
+                "    compute_metrics=compute_metrics,\n",
+                ")\n",
+                "\n",
+                "\n",
+                "# Cell 9: Fine-tune the model\n",
+                "trainer.train()\n",
+                "\n",
+                "# Cell 9: Save the fine-tuned model\n",
+                "model.save_pretrained('/opt/dlami/nvme/AAA_SQL_V2')\n",
+                "tokenizer.save_pretrained('/opt/dlami/nvme/AAA_SQL_V2')\n",
+                "\n",
+                "print(\"Model fine-tuned and saved successfully.\")"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 17,
+            "metadata": {},
+            "outputs": [],
+            "source": [
+                "import json\n",
+                "import random\n",
+                "from sklearn.model_selection import train_test_split\n",
+                "from transformers import T5Tokenizer, T5ForConditionalGeneration, Trainer, TrainingArguments\n",
+                "from datasets import load_metric\n",
+                "\n",
+                "model_name = '/opt/dlami/nvme/AAA_V2/checkpoint-1386'\n",
+                "tokenizer = T5Tokenizer.from_pretrained(model_name)\n",
+                "model = T5ForConditionalGeneration.from_pretrained(model_name)"
+            ]
+        },
+        {
+            "cell_type": "code",
+            "execution_count": 19,
+            "metadata": {},
+            "outputs": [
+                {
+                    "name": "stderr",
+                    "output_type": "stream",
+                    "text": [
+                        "/home/ubuntu/.local/lib/python3.10/site-packages/transformers/generation/utils.py:1168: UserWarning: Using the model-agnostic default `max_length` (=20) to control the generation length. We recommend setting `max_new_tokens` to control the maximum length of the generation.\n",
+                        "  warnings.warn(\n"
+                    ]
+                },
+                {
+                    "name": "stdout",
+                    "output_type": "stream",
+                    "text": [
+                        "Generated SQL: SELECT description FROM faculty WHERE name_arabic = 'الهندسة والتكنولوجيا'\n"
+                    ]
+                }
+            ],
+            "source": [
+                "def generate_sql(query, model, tokenizer):\n",
+                "    inputs = tokenizer(query, return_tensors=\"pt\")\n",
+                "    outputs = model.generate(**inputs)\n",
+                "    return tokenizer.decode(outputs[0], skip_special_tokens=True)\n",
+                "\n",
+                "# Example Arabic query\n",
+                "test_query = \"اوصفلي العقاد\"\n",
+                "# Generate and print the SQL query\n",
+                "generated_sql = generate_sql(test_query,model, tokenizer)\n",
+                "print(f\"Generated SQL: {generated_sql}\")"
+            ]
+        }
+    ],
+    "metadata": {
+        "kernelspec": {
+            "display_name": "Python 3",
+            "language": "python",
+            "name": "python3"
+        },
+        "language_info": {
+            "codemirror_mode": {
+                "name": "ipython",
+                "version": 3
+            },
+            "file_extension": ".py",
+            "mimetype": "text/x-python",
+            "name": "python",
+            "nbconvert_exporter": "python",
+            "pygments_lexer": "ipython3",
+            "version": "3.10.12"
+        }
+    },
+    "nbformat": 4,
+    "nbformat_minor": 2
+}

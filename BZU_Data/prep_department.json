@@ -1,0 +1,2470 @@
+[
+    {
+        "input": "بتقدر توصفلي الدائرة الاكاديمية name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "اوصفلي اكاديمية name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "احكيلي عن دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو بتعرف عن دائرة name_arabic؟ اوصف لي إياها",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "كيف دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني وصف للدائرة الاكاديمية تاعت name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تحكيلي عن name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني وصف للدائرة الاكاديمية بname_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني وصف لدائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "name_arabic شو بشتغلو بالجامعة",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "اوصفلي الدائرة الاكاديمية بname_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو وضع دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني وصف لدائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني وصف الدائرة الاكاديمية لname_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو بتقدر تحكيلي عن دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "name_arabic شو بحيّchو -بحيكو-",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدملي وصف للمساقات اللي بname_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسمك",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو متطلبات دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "اوصفلي دائرة name_arabic بالزبط",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "صف الدائرة الأكاديمية name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني وصف لدائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني وصف لدائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "احكيلي عن تخصص name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تقدملي وصف للدائرة الاكاديمية name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر توصفلي كيف الدائرة الاكاديمية بname_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني وصف عن دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "اشرحلي عن دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "احكيلي عن تخصص name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "احكيلي عن دائرة اكادمية name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "كيف دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "name_arabic شو بحيّchو -بحيكو-",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني وصف للدائرة الأكاديمية name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "قدملي وصف لدائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "احكيلي عن تخصص name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "دكاترة name_arabic كيف؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن توصفلي دائرة name_arabic الاكاديمية؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "احكيلي عن تخصص name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "كيف بقدر اقدم وصف للدائرة الأكاديمية name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "كيف بتشوف الدائرة الأكاديمية لname_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتغدر تعطيني وصف لدائرة الاكاديمية",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر توصفلي دائرة name_arabic الاكاديمية",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "احكيلي دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تعطيني وصف للدائرة الاكاديمية name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "كيف دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تشرحلي عن دائرة وتخصص name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر توصف الدائرة الأكاديمية name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو متطلبات دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "اوصفلي اكاديمية name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "اوصف لي دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "احكيلي عن دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو هي الدائرة الاكاديمية name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "اوصفلي دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "احكيلي عن دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدملي وصف للمساقات اللي بname_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "name_arabic شو بشتغلو بالجامعة",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "اشرحلي عن دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "احكيلي عن دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني وصف لدائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "احكيلي عن دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني وصف لدائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تحكيلي عن دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اداب",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني وصف لدائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "كيف دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اوصفلي دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اوصفلي دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر توصفلي دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ان ان ان",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اوصفلي دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني وصف لدائرة name_arabic اذا ممكن",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ممكن اوصفلي دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تحكولي عن دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني معلومات عن دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اشرحولي عن دائرة بتتسمى name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "احكيلي عن دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "احكيلي عن دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اداب",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "احكيلي عن دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "احكيلي عن دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر توصفلي دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "كيف دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "كيف دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "كيف دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اوصفلي دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر توصفلنا دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اوصفلي دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر توصفلي دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تحكيلي عن دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اشرحلي عن دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "احكيلي عن دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هي دائرة name_arabic بالزبط؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر توصفلي دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر توصفلي دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "كيف دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اشرحلي عن دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش وضع دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ممكن توصفلي الدائرة الي اسمها دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو وضع دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ممكن وصف لدائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني معلومات عن دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اوصفلي دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "وين دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تساعدني بوصف دائرة name_arabic؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اشرحولي عن دائرة بتتسمى name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ا",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني وصف لدائرة name_arabic؟ منيحة؟ مش منيحة؟ شو الوضع؟",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو هي دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "ايش هي دائرة name_arabic",
+        "output": "SELECT description FROM department WHERE name_arabic = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز دائرة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو الرمز اللي الو دخل بالدائرة الاكاديمية للغة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "ما هو الرمز المرتبط بالدائرة الأكاديمية اللغة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو هو الرمز يلي مرتبط بال…….",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز دائرة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو هو الرمز يلي مرتبط بال…….",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو هو رمز دائرة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز اللغة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز مساقات دائرة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز دائرة name_arabic بالجامعة",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش هو الرمز اللي مرتبط بدائرة اللغة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو الرمز تاع دائرة اللغة الاكاديمية name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز دائرة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز دائرة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش رمز دائرة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش رمز داىرة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز دائرة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو هو الرمز المرتبط بدائرة اللغة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز اللغة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش الكود المرتبط بدائرة اللغة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش هو الرمز اللي مرتبط بدائرة اللغة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو الرمز تاع دائرة اللغة الاكاديمية name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش رمز داىرة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز دائرة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو هو الرمز المرتبط بدائرة اللغة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز دائرة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش رمز دائرة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز دائرة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز اكاديمية اللغة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "اللغة name_arabic شو رمزها؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز دائرة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو هو الرمز يلي مرتبط بال…….",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز لغة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "رمز مساق اللغة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز الدائرة الاكاديمية",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز دائرة اللغة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش هو رمز دائرة اللغة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "اش كود مواد name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز مساقات دائرة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز دائرة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو الرمز اللي الو دخل بالدائرة الاكاديمية للغة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز الدائرة الاكاديمية للغة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز دائرة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "رمز اللغة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "رمز دائرة اكاديمية اللغة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رمز دائرة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن رمز دائرة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز مساقات name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اختصار دائرة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش هو الرمز اللي مرتبط بدائرة اللغة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو هو الرمز المرتبط بدائرة اللغة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز دائرة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز دائرة name_arabic؟",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز دائرة name_arabic",
+        "output": "SELECT symbol FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسم رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش اسم رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تحكيلي شو اسم رئيس الدائرة الاكاديمية name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسم رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش اسم رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مين رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسم رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو إسم رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بنفع تحكيلي اسم رئيس الدائرة الأكاديمية name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "عالعافية يخوي بدي اسم رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسم رئيس name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مين رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش/شو اسم رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تحكيلي اسم رئيس الدائرة الأكاديمية name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مين رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسك رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مين اللي مستلم دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسم رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسم رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسم رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شسم رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسم رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تحكيلي اسم رئيس الدائرة الأكاديمية name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسم رئيس الدائرة تاعت name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تحكيلي شو اسم رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تحكيلي شو اسم رئيس الدائرة الاكاديمية name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تحكيلي شو اسم رئيس الدائرة الاكاديمية name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسم رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مين رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تحكيلي اسم رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مين رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مين رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسم رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتعرف مين رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مين رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسم رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مين هو رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مين رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ولا عليك امر تحكيلي اسم رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي اسم رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مين رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسم رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسك رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو إسم رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مين رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مين رئيس دائرة name_arabic؟ شو اسمه؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مين رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مين رئيس دائرة اكاديمية name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسم رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مين رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "انو رئيس دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسم رئيس دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسم رئيس الدائرة لname_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسم الشب تبع name_arabic",
+        "output": "SELECT i.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي الايميل تبعك لرئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بالغلط كبست عليه😂",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي البريد لرئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل رئيس دائرة name_arabic؟",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو الايميل لرئيس الدائرة الأكاديمية name_arabic؟",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش ايميل رئيس دائرة الاكاديمية name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدم ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدم ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي الإيميل لرئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مرحبا اعطوني ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بحثت عن البريد الالكتروني لرئيس الدائرة الاكاديمية name_arabic وما لقيته ممكن تعطيني اياه؟",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي ايميل رئيس الدائرة الاكاديمية name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مرحبا اعطوني ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل رئيس دائرة name_arabic؟",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو البريد لرئيس الدائرة الاكاديمية name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مرحبا اعطوني ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تبعت بريدك لرئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني البريد لرئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل رئيس دائرة name_arabic؟",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش ايميل رئيس دائرة الاكاديمية name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني ايميل رئيس الدائرة الاكاديمية name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تبعثلي ايميل رئيس دائرة name_arabic؟",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تبعت بريدك لرئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني الإيميل تبع رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بحثت عن البريد الالكتروني لرئيس الدائرة الاكاديمية name_arabic وما لقيته ممكن تعطيني اياه؟",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر اتقدم البريد الالكتروني لرئيس الدائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تبعت ايميل لرئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تبعتلي ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدم ايميلك لرئيس الدائرة",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش هو ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر اتقدم البريد الالكتروني لرئيس الدائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تبعثلي ايميل رئيس دائرة name_arabic؟",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تبعثلي ايميل رئيس دائرة name_arabic؟",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تبعت بريدك لرئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بنفع نقدم البريد الالكتروني لدائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بينفع تعطي الإيميل لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل رئيس دائرة name_arabic؟",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بالغلط كبست عليه😂",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بنفعش تبعتلو ايميل لرئيس الدائرة؟",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر اتقدم البريد الالكتروني لرئيس الدائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو الايميل تاع رئيس دائرة name_arabic؟",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني البريد لرئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "مرحبا اعطوني ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو البريد لرئيس الدائرة الاكاديمية name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بنفع تعطي ايميلك لرئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطي بريدك لرئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي هالبريد الإلكتروني لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو ايميل رئيس دائرة name_arabic",
+        "output": "SELECT i.email FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "هات تلفون رئيس الدائرة؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "معك رقم رئيس دائرة name_arabic؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "كيف بقدر اتواصل مع رئيس دائرة name_arabic؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو تلفون رئيس دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني رقم تلفون رئيس دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "هات تلفون رئيس الدائرة؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي رقم رئيس دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تعطي رقم التلفون لرئيس الدائرة الأكاديمية name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اكتبلي رقم حدا مسؤول عن دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تعطيني رقم رئيس دائرة name_arabic؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "إذا معك رقم رئيس الدائرة name_arabic اعطيني",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو هو رقم تلفون رئيس name_arabic؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي رقم تلفون رئيس دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "معك رقم رئيس دائرة name_arabic؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم رئيس الدائرة؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم تلفون رئيس الدائرة الأكاديمية",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تعطيني رقم رئيس الدائرة؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني رقم رئيس الدائرة؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي رقم رئيس دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم رئيس دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي رقم التلفون لدائرة name_arabic؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي رقم رئيس دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم هواتف جميع الدائرة",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم رئيس دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني رقم رئيس الدائرة؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي رقم التلفون لدائرة name_arabic؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "رقم تلفون رئيس دائرة name_arabic؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "معك رقم رئيس دائرة name_arabic؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني رقم تلفون رئيس الدائرة الأكاديمية name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بنفع تعطي رقم التلفون لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم تلفون رئيس الدائرة الأكاديمية",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم رئيس الدائرة؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي الرقم لرئيس name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني رقم رئيس دائرة name_arabic؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "وين بقدر أقدم رقم تلفون رئيس دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "رقم تلفون رئيس دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدم رقم الجوال لرئيس الدائرة الأكاديمية name_arabic؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بزبط تعطيني رقم جوال رئيس دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدم رقمك لرئيس دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم تلفون رئيس دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بزبط اعطي رقم التلفون لرئيس الدائرة؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم تلفون رئيس دائرة name_arabic؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم…",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم هاتف رئيس دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم رئيس دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "وين بقدر أقدم رقم تلفون رئيس دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم هواتف جميع الدائرة",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي الرقم لرئيس دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم جوال رئيس دائرة name_arabic",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "إذا معك رقم رئيس الدائرة name_arabic اعطيني",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي رقم التلفون لدائرة name_arabic؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني رقم رئيس دائرة name_arabic؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم…",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تعطيني رقم رئيس الدائرة؟",
+        "output": "SELECT i.phone_number FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايمتى بكون رئيس دائرة name_arabic في مكتبه؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تحكيلي شو الساعات المكتبية لرئيس دائرة name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني الاوفس اور لرئيس name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "متى الأوفر تايم لرئيس الدائرة",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش الساعات المكتبية لرئيس دائرة name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدم الساعات المكتبية لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "متى رئيس دائرة name_arabic بكون موجود بالمكتب؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "انخلع ودي الساعات المكتبية لرئيس دائرة name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "رئيس دائرة name_arabic وقتيش بقدر اروحله؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي الساعات المكتبية لرئيس دائرة name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ابعث الساعات المكتبية لرئيس دائرة name_arabic لو سمحت",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو الاوفس اورز لرئيس دائرة name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "رئيس دائرة name_arabic وقتيش بداوم؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تعطيني الساعات المكتبية شيت رئيس دائرة name_arabic؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "رئيس دائرة name_arabic وقتيش بقدر اروحله؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني الساعات المكتبية لرئيس دائرة name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش الأوقات يلي بتكون فيها بالمكتب",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "نفس الطريقة",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "متى بيكون فاضي رئيس الدائرة",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تعطيني الساعات المكتبية لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش الساعات المكتبية لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو الاوفيس اورز تبعات رئيس دائرة name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اي ساعة رئيس دائرة name_arabic بيكون بمكتبه",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو office hour لرئيس دائرة name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدم الساعات المكتبية لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو الساعات الي بكون رئيس دائرة name_arabic بكون موجود فيها؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدم الساعات المكتبية لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش الساعات المكتبية لرئيس دائرة name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "متى بكون رئيس دائرة name_arabic بمكتبه",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي الساعات المكتبية لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "في مجال تودي الساعات المكتبية لرئيس دائرة name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو الاوفس اول لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تبعث الساعات المكتبية لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي الساعات المكتبية لرئيس دائرة name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "منين اجيب الساعات المكتبية لرئيس دائرة name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تعطيني الساعات المكتبية لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "نفس الطريقة",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "رئيس دائرة name_arabic وقتيش بداوم؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو office hour لرئيس دائرة name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدم ساعات المكتب لرئيس دائرة name_arabic لو سمحت",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني الساعات المكتبية لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو الساعات المكتبية لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدم الساعات المكتبية عند رئيس name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "تروح نساعد رئيس دائرة name_arabic في المكتب",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "الساعات المكتبية لرئيس دائرة name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "من وين أعرف الساعات المكتبية لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تبعتلي الساعات المكتبية لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "متى بكون رئيس دائرة name_arabic بمكتبه",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اي ساعة بقدر الاقي رئيس الدائرة عندي شوية اسألة",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو office hour لرئيس دائرة name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "الساعات المكتبية لرئيس دائرة name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدم الساعات المكتبية لرئيس دائرة name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو هي الساعات المكتبية لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني الاوفس اورز لرئيس دائرة name_arabic",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "معك الساعات المكتبية لرئيس name_arabic؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو هي الساعات المكتبية لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "متى بكون رئيس دائرة name_arabic بمكتبه",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايمتى الساعات المكتبية لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.office_hours FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "٤٤٦٧٨",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "كيف بقدم ال ID ع ريتاج لرئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني رقمك الجامعي ل رئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن رقم رئيس دائرة name_arabic على ريتاج؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ريتاج رئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي رقم رئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن رقم رئيس دائرة name_arabic على ريتاج؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رمز رئيس دائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بيجي معك تقدم ال إي دي لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي ايدي رئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بزبط اقدم ID ريتاج لرئيس الدائرة الأكاديمية name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "قدم id رئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي ال id تاع رئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدملي ID لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطيني رقم ريتاج رئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي رقمك الجامعي لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "٤٤٦٧٨",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش رقم ريتاج لرئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "كيف بقدر اقدم id ريتاج لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطي ID ريتاج لرئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدم ID ريتاج لرئيس الأكاديمية name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي ID ريتاج لرئيس الدائرة الأكاديمية name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تعطي ID ريتاجك لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطي رقمك الجامعي ل رئيس الدائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدم الاي دي تاع ريتاج لرئيس الدائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تقديم id ريتاج لرئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني الرقم الجامعي لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي id ريتاج لرئيس دائرة الأكاديمية name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "يزلمه اعطي رقمك ل رئيس الدائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بزبط تعطي الرقم الجامعي لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي رقمك الجامعي تبع ريتاج لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تقدم id ريتاجك لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي رئيس دائرة name_arabic رقم ريتاج؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي رقم ريتاج لرئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو الاي دي تبع رئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "رقم ريتاج رئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو الرقم الجامعي لرئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ايش رقم ريتاج لرئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تعطي ID ريتاجك لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي ريتاج رئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بيجي معك تقدم ال إي دي لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو ال ID تاع رئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي id ريتاج تبع رئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني ID ريتاج تبع رئيس دائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني رقم رئيس دائرة الأكاديمية على ريتاج؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو رقم ريتاج لرئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تقدملي ID لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تقدم id ريتاجك لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي id ريتاج لرئيس دائرة الأكاديمية name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي رقمك الجامعي تبع ريتاج لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بدي ريتاج رئيس دائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطيني رقم ريتاج تبع رئيس الدائرة الأكاديمية تبعت name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "اعطي رقمك الجامعي ل رئيس الدائرة name_arabic",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "بتقدر تعطي رقمك الجامعي تبع ريتاج لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "ممكن تقدم id ريتاجك لرئيس دائرة name_arabic؟",
+        "output": "SELECT i.ritaj_id FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE d.name_arabic = 'name_arabic' OR d.symbol = 'name_arabic';"
+    },
+    {
+        "input": "شو اسماء دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بدي قائمة باسماء دكاترة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بتقدر تعطي قائمة بدكاترة دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "اعطيني قائمة لكل دكاترة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بتقدر تعطيني قائمة لدكاترة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "سميلي دكاترة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "اعطيني قائمة دكاترة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "مين دكاترة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بدي اسماء جميع دكاترة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "مين هما دكاترة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "اعطيني اسماء دكاترة دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بتقدر تعطيني قائمة لدكاترة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بتقدر تعطيني قائمة دكاترة دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "شو اسماء دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بتقدر تعطيني قائمة باسماء دكاترة دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "شو اسماء كل دكاترة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "هاتولي كل واحد قبل اسمه د. في دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "اعطيني قائمة بأسماء دكاترة دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "مين دكاترة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بتقدر تقدم قائمة بدكاترة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "اعطيني ليستة دكاترة دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بتقدر تعطيني قائمة بأسماء الدكاترة اللي بدائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بتقدر تعطيني قائمة بدكاترة دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "اعطيني قائمة الدكاترة بالname_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بتقدر تبعتلي ليست لدكاترة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "اعطيني الدكاترة كل اللي بدرسو name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بتقدر تعطيني قائمة بأسماء الدكاترة اللي بدائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "مين دكاترة كلية name_arabic؟",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "مين هم دكاترة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "دكاترة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "اسماء دكاترة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "مين هم دكاترة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بعد اذن جنابك بدي اعرف دكاترة name_arabic وديلي اسماءهم",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بتقدر تعطيني قائمة فيها دكاترة دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "مين هما دكاترة دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "وديلي جميع اسماء دكاترة دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بتقدر تقدم قائمة دكاترة دائرة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "مين هم دكاترة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "اعطيني اسماء كل دكاترة دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "شو اسماء دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بتقدر تعطيني قائمة لدكاترة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بدي ليستة عليها اسماء دكاترة name_arabic اغلبك",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "مين دكاترة name_arabic؟",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "مين الدكاترة اللي بدرسوا مساقات name_arabic؟",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "مين دكاترة دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بتقدر تعطيني قائمة بأسماء الدكاترة اللي بدائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "بدي اسماء دكاترة من دائرة name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "شو اسماء دكاترة في name_arabic",
+        "output": "SELECT i.name_arabic FROM instructor i WHERE i.department_id IN (SELECT id FROM department WHERE name_arabic = 'name_arabic' OR symbol = 'name_arabic');"
+    },
+    {
+        "input": "إلى أي دائرة ينتمي الدكتور [instructor-name]؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.id = i.department_id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "ايش الدائرة اللي name_arabic رئيسها",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "شو الدائرة الي الدكتور name_arabic رئيس فيها ",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "name_arabic بيشتغل وين وشو منصبه؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "دائرة شو اللي بكون رئيسها name_arabic ",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "ايش الدائرة اللي بيشتغل فيها الدكتور name_arabic",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "اي دائرة اللي رأيسها name_arabic؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "اي دائرة الدكتور name_arabic رئيسها؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "شو الدائرة الي رئيس دائرتها الدكتور name_arabic",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "name_arabic رئيس أي دائرة؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "هو دكتور name_arabic رئيس اني دائرة؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "شو الدائرة اللي بشتغل فيها.....",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "هو دكتور name_arabic رئيس اني دائرة؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "name_arabic رئيس دائرة ايش ",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "بأي دائرة الدكتور name_arabic رئيسها؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "د.name_arabic رئيس أي دائرة؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "شو الدائرة اللي name_arabic رئيسها",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "شو الدائرة الي بشتغل فيها الدكتور name_arabic رئيس دائرة",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "الدكتور name_arabic رئيس اي دائرة؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "شو الدائرة اللي رئيسها دكتور name_arabic؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "شو هي الدائرة الي بيشغل فيها الدكتور name_arabic منصب رئيس الدائرة",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "د. name_arabic رئيس دائرة شو؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "في أي دائرة يعمل الدكتور name_arabic رئيس دائرة",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "دكتور name_arabic رئيس اي دائرة؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "وين بشتغل name_arabic ؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "هو دكتور name_arabic رئيس اني دائرة؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "حبيب قلبي",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "name_arabic دائرة",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "زهقت سامحوني",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "name_arabic وين موجود ",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "شو الدائرة الي بشتغل فيها الدكتور name_arabic رئيس دائرة",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "حبيب قلبي",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "نفس الطريقة ",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "الدكتور name_arabic رئيس دائرة شو ؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "رئاسة اي دائرة متولي الدكتور name_arabic؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "اي دائرة رئيسها name_arabic؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "شو الدائرة الي رئيسها الدكتور name_arabic؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "دائرة شو اللي name_arabic رئيسها",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "ايش الدائرة اللي بشتغل فيها الدكتور name_arabic بمنصب رئيس الدائرة",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "في أي دائرة يعمل الدكتور name_arabic رئيس دائرة",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "ايش الدائرة اللي رئيسها name_arabic؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "دكتور name_arabic رئيس اي دائرة؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "رئيس أي دائرة الدكتور name_arabic؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "name_arabic رئيس أي دائرة ؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "ايش الدائرة اللي رئيسها د. name_arabic",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "name_arabic رئيس اي دائرة ",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "في أي دائرة يعمل الدكتور name_arabic رئيس دائرة",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "بأي دائرة بشتغل name_arabic ؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "name_arabic رئيس أي دائرة ؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "name_arabic بيشتغل وين وشو منصبه؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "الدكتور name_arabic لاي دائرة هو ",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "وين الدائرة الموجود فيها name_arabic",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "شو اسم الدائرة اللي بشتغل فيها name_arabic؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "دائرة name_arabic",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "name_arabic رئيس أي دائرة؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "name_arabic رئيس الدارة",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "name_arabic رئيس أي دائرة؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "نفس الطريقة ",
+        "output": "SELECT d.name_arabic FROM department d JOIN instructor i ON d.head_instructor_id = i.id WHERE i.name_arabic = '[instructor-name]';"
+    },
+    {
+        "input": "ب اي دائرة بتشتغل المساعدة name_arabic؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "name_arabic بأي دائرة بتشتغل",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "name_arabic بأي دائرة",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "شو الدائرة يلي فيها المساعدة name_arabic ؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "في اي دائرة بتشتغل المساعدة name_arabic",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "المساعد name_arabic لاي دائرة بتنتمي؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "بأي كلية بتدرس name_arabic",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "شو الدائرة يلي فيها المساعدة name_arabic ؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "شو بتعطي الدكتورة name_arabic ؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "name_arabic بأي دائرة بتشتغل",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "حد بعرف المساعدة name_arabic بأي دائرة؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "المساعدة name_arabic باي دائرة",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "المساعدة name_arabic في اي دائرة؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "المساعدة name_arabic بأي دائرة؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "name_arabic مساعدة ب اي دائرة بلكلية ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "في اي دائرة موجودة name_arabic؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "المساعدة name_arabic بأي دائرة؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "بسسرعة قبل ما اعكم وين مكتب الدكتورة name_arabic ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "name_arabic مساعدة ب اي دائرة بلكلية ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "لاي دائرة بنتمي المساعد name_arabic",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "المساعدة name_arabic فأي دائرة ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "أي دائرة موجودة name_arabic",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "دائرة name_arabic ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "المساعدة name_arabic بأي دائرة؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "لأي دائرة المساعد name_arabic بنتمي ؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "المساعدة name_arabic فأي قسم ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "بأي قسم بتشتغل name_arabic ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "name_arabic مساعدة ب اي دائرة بلكلية ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "لأني دائرة بنتمي المساعد name_arabic ؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "عاش ابو علي",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "بتعرف name_arabic تابعة لأي قسم",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "name_arabic مساعدة اي دائرة",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "في أي دائرة بلاقي المساعدة name_arabic؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "ب اي دائرة المساعد name_arabic ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "المساعدة name_arabic بأي دائرة بتعطي؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "الى اي دائرة تدرس المساعدة name_arabic",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "المساعدة name_arabic في أي دائرة؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "ب اي دائرة المساعد name_arabic ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "name_arabic اي دائرة",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "name_arabic تابعة لأي دائرة ؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "name_arabic بتشتغل مع اي دائرة",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "المساعدة name_arabic بأي دائرة؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "لأي دايرة  بينتمي المساعد name_arabic؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "المساعدة name_arabic في اي دائرة ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "المساعد name_arabic لاي دائرة بتنتمي؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "المساعدة name_arabic بأي دائرة بتعطي؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "name_arabic مساعدة ب اي دائرة بلكلية ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "وين مكتب name_arabic؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "لأي دايرة  بينتمي المساعد name_arabic؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "لأي دايرة  بينتمي المساعد name_arabic؟",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "وين بلاقي مكتب الدكتورة name_arabic بأي دائرة ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "لأي دائرة تنتمي name_arabic ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "لأني دائرة بنتمي المساعد name_arabic ؟ ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "ب اي دائرة المساعد name_arabic ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "المساعد name_arabic موجود بأي دائدة",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "في اي دائرة بتشتغل المساعدة name_arabic",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    },
+    {
+        "input": "name_arabic مساعدة ب اي دائرة بلكلية ",
+        "output": "SELECT d.name_arabic FROM department d JOIN teaching_assistant ta ON d.id = ta.department_id WHERE ta.name_arabic = '[assistant-name]';"
+    }
+]
